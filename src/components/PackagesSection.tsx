@@ -67,13 +67,13 @@ const PackagesSection = () => {
   return (
     <section id="packages" className="py-20 bg-background">
       <div className="container mx-auto px-4">
-        <p className="text-center text-primary font-display italic text-lg mb-2">
+        <h2 className="text-center mb-2">
           South India Tour Packages
-        </p>
-        <h2 className="text-3xl md:text-5xl font-bold font-display text-foreground text-center mb-4">
-          Explore the Best of South India
         </h2>
-        <p className="text-center text-muted-foreground font-body max-w-2xl mx-auto mb-14">
+        <h3 className="text-center mb-4">
+          Explore the Best of South India
+        </h3>
+        <p className="text-center max-w-2xl mx-auto mb-14">
           Handcrafted travel packages to the most stunning destinations across South India.
           Temples, beaches, hill stations & more!
         </p>

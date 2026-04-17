@@ -1,20 +1,23 @@
-import Header from "@/components/Header";
+import Layout from "@/components/Layout";
 import HeroSection from "@/components/HeroSection";
+import CategorySection from "@/components/CategorySection";
+import ChooseTripSection from "@/components/ChooseTripSection";
+import JourneySection from "@/components/JourneySection";
 import PackagesSection from "@/components/PackagesSection";
 import AboutSection from "@/components/AboutSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
-import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
-      <Header />
+    <Layout>
       <HeroSection />
+      <CategorySection />
+      <ChooseTripSection />
+      <JourneySection />
       <PackagesSection />
       <AboutSection />
       <TestimonialsSection />
-      <Footer />
-    </div>
+    </Layout>
   );
 };
 

@@ -1,0 +1,31 @@
+<svg width="1200" height="100" viewBox="0 0 1200 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="roughPaper">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="5" result="noise" />
+      <feDiffuseLighting in="noise" lightingColor="white" surfaceScale="1">
+        <feDistantLight azimuth="45" elevation="60" />
+      </feDiffuseLighting>
+    </filter>
+    <filter id="roughEdge">
+      <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="2" result="turbulence" />
+      <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="5" />
+    </filter>
+  </defs>
+  <path
+    d="M0,20 Q50,5 150,18 T300,15 Q450,8 600,22 T900,18 Q1050,10 1200,25 L1200,100 L0,100 Z"
+    fill="white"
+    filter="url(#roughPaper)"
+    opacity="0.8"
+  />
+  <path
+    d="M0,35 Q100,15 250,32 T500,28 Q750,20 950,35 T1200,30 L1200,100 L0,100 Z"
+    fill="white"
+    filter="url(#roughEdge)"
+    opacity="0.6"
+  />
+  <path
+    d="M0,50 Q200,25 400,48 T800,45 Q1000,35 1200,55 L1200,100 L0,100 Z"
+    fill="white"
+    opacity="0.4"
+  />
+</svg>

@@ -1,4 +1,5 @@
 import { Phone, Mail, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -35,23 +36,23 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold font-display text-secondary-foreground mb-4">South India Packages</h4>
             <ul className="space-y-2 text-sm font-body">
-              <li><a href="#packages" className="hover:text-primary transition-colors">Kerala Tour Packages</a></li>
-              <li><a href="#packages" className="hover:text-primary transition-colors">Tamil Nadu Tour Packages</a></li>
-              <li><a href="#packages" className="hover:text-primary transition-colors">Karnataka Tour Packages</a></li>
-              <li><a href="#packages" className="hover:text-primary transition-colors">Andhra Pradesh Packages</a></li>
-              <li><a href="#packages" className="hover:text-primary transition-colors">Pondicherry Packages</a></li>
-              <li><a href="#packages" className="hover:text-primary transition-colors">Telangana Tour Packages</a></li>
+              <li><Link to="/packages" className="hover:text-primary transition-colors">Kerala Tour Packages</Link></li>
+              <li><Link to="/packages" className="hover:text-primary transition-colors">Tamil Nadu Tour Packages</Link></li>
+              <li><Link to="/packages" className="hover:text-primary transition-colors">Karnataka Tour Packages</Link></li>
+              <li><Link to="/packages" className="hover:text-primary transition-colors">Andhra Pradesh Packages</Link></li>
+              <li><Link to="/packages" className="hover:text-primary transition-colors">Pondicherry Packages</Link></li>
+              <li><Link to="/packages" className="hover:text-primary transition-colors">Telangana Tour Packages</Link></li>
             </ul>
           </div>
 
           <div>
             <h4 className="font-semibold font-display text-secondary-foreground mb-4">Quick Links</h4>
             <ul className="space-y-2 text-sm font-body">
-              <li><a href="#home" className="hover:text-primary transition-colors">Home</a></li>
-              <li><a href="#about" className="hover:text-primary transition-colors">About Us</a></li>
-              <li><a href="#packages" className="hover:text-primary transition-colors">All Packages</a></li>
-              <li><a href="#testimonials" className="hover:text-primary transition-colors">Testimonials</a></li>
-              <li><a href="#contact" className="hover:text-primary transition-colors">Contact</a></li>
+              <li><Link to="/" className="hover:text-primary transition-colors">Home</Link></li>
+              <li><Link to="/about" className="hover:text-primary transition-colors">About Us</Link></li>
+              <li><Link to="/packages" className="hover:text-primary transition-colors">All Packages</Link></li>
+              <li><Link to="/testimonials" className="hover:text-primary transition-colors">Testimonials</Link></li>
+              <li><Link to="/contact" className="hover:text-primary transition-colors">Contact</Link></li>
             </ul>
           </div>
 

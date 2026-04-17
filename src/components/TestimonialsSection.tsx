@@ -25,12 +25,12 @@ const TestimonialsSection = () => {
   return (
     <section id="testimonials" className="py-20 bg-secondary">
       <div className="container mx-auto px-4">
-        <p className="text-center text-primary font-display italic text-lg mb-2">
+        <h2 className="text-center mb-2">
           Testimonials
-        </p>
-        <h2 className="text-3xl md:text-4xl font-bold font-display text-secondary-foreground text-center mb-14">
-          What Our Clients Say!
         </h2>
+        <h3 className="text-center mb-14">
+          What Our Clients Say!
+        </h3>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((t) => (
@@ -44,12 +44,12 @@ const TestimonialsSection = () => {
                   <Star key={i} className="w-4 h-4 text-primary fill-primary" />
                 ))}
               </div>
-              <p className="text-secondary-foreground/80 font-body text-sm leading-relaxed mb-6">
+              <p className="leading-relaxed mb-6">
                 "{t.text}"
               </p>
               <div>
-                <p className="font-semibold text-secondary-foreground font-display">{t.name}</p>
-                <p className="text-xs text-secondary-foreground/60 font-body">{t.location}</p>
+                <p className="font-semibold">{t.name}</p>
+                <p className="text-sm">{t.location}</p>
               </div>
             </div>
           ))}

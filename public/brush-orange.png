@@ -1,0 +1,12 @@
+<svg width="200" height="60" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="roughPaper">
+      <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="3" result="noise" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="3" />
+    </filter>
+  </defs>
+  <path d="M10,30 Q50,15 100,28 T190,25 Q195,30 190,35 Q150,45 100,38 T10,35 Q5,32 10,30" 
+        fill="#f97316" 
+        filter="url(#roughPaper)" 
+        opacity="0.9"/>
+</svg>

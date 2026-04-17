@@ -23,18 +23,18 @@ const AboutSection = () => {
               height={600}
             />
             <div className="absolute -bottom-6 -right-6 bg-gradient-primary text-primary-foreground rounded-2xl p-6 shadow-elevated hidden md:block">
-              <p className="text-3xl font-bold font-display">10+</p>
-              <p className="text-sm font-body">Years of<br/>Experience</p>
+              <p className="text-3xl font-bold">10+</p>
+              <p className="text-sm">Years of<br/>Experience</p>
             </div>
           </div>
 
           <div>
-            <p className="text-primary font-display italic text-lg mb-2">Why Choose Us</p>
-            <h2 className="text-3xl md:text-4xl font-bold font-display text-foreground mb-6">
+            <h2 className="mb-2">Why Choose Us</h2>
+            <h3 className="mb-6">
               Stress-free Holidays with<br/>
-              <span className="text-primary">SDK Tours & Travels</span>
-            </h2>
-            <p className="text-muted-foreground font-body mb-8 leading-relaxed">
+              <span className="text-[#f97316]">SDK Tours & Travels</span>
+            </h3>
+            <p className="mb-8 leading-relaxed">
               SDK Tours & Travels is one of the leading travel agencies in South India.
               We make sure your next trip is truly special. Our friendly and experienced team
               plans everything based on your needs, so you can enjoy a holiday filled with great memories.
@@ -47,8 +47,8 @@ const AboutSection = () => {
                     <f.icon className="w-5 h-5 text-primary-foreground" />
                   </div>
                   <div>
-                    <h4 className="font-semibold font-display text-foreground text-sm">{f.title}</h4>
-                    <p className="text-xs text-muted-foreground font-body mt-1">{f.desc}</p>
+                    <h4 className="font-semibold text-sm">{f.title}</h4>
+                    <p className="text-xs mt-1">{f.desc}</p>
                   </div>
                 </div>
               ))}
