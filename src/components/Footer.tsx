@@ -1,83 +1,148 @@
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin, Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
+
+const headingStyle = {
+  fontFamily: "'Cormorant Infant', Arial, Helvetica, sans-serif",
+  fontSize: "24px",
+  fontWeight: 700,
+  color: "#F0870D",
+  marginBottom: "16px",
+  display: "block",
+};
+
+const linkStyleOrange = {
+  fontFamily: "'DM Sans', sans-serif",
+  fontSize: "14px",
+  color: "#f97316",
+  textDecoration: "none",
+};
+
+const linkStyleMuted = {
+  fontFamily: "'DM Sans', sans-serif",
+  fontSize: "14px",
+  color: "#ffffff",
+  textDecoration: "none",
+};
+
+const bodyStyle = {
+  fontFamily: "'DM Sans', sans-serif",
+  fontSize: "14px",
+  color: "#ffffff",
+  lineHeight: "1.7",
+};
 
 const Footer = () => {
   return (
     <footer id="contact" className="bg-secondary pt-16 pb-6">
       <div className="container mx-auto px-4">
-        {/* CTA Banner */}
-        <div className="bg-gradient-primary rounded-2xl p-8 md:p-12 text-center mb-16 -mt-32 relative z-10 shadow-elevated">
-          <h2 className="text-2xl md:text-4xl font-bold font-display text-primary-foreground mb-4">
-            Life is short & the world is wide!
-          </h2>
-          <p className="text-primary-foreground/80 font-body mb-6">
-            Book your South India tour today and create memories that last forever.
-          </p>
-          <a
-            href="tel:+919876543210"
-            className="inline-flex items-center gap-2 bg-secondary text-secondary-foreground px-8 py-3 rounded-full font-semibold font-body hover:opacity-90 transition-opacity"
-          >
-            <Phone className="w-4 h-4" />
-            Book Now
-          </a>
-        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 text-secondary-foreground/80">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+          {/* Brand */}
           <div>
-            <h3 className="text-xl font-bold font-display text-secondary-foreground mb-4">
-              SDK <span className="text-primary">Tours</span> & Travels
-            </h3>
-            <p className="text-sm font-body leading-relaxed">
+            <div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "20px", fontWeight: 700, color: "#F0870D", marginBottom: "16px" }}>
+              SKT tours and travels
+            </div>
+            <p style={bodyStyle}>
               Your trusted travel partner for exploring the incredible beauty of South India.
-              We craft unforgettable journeys tailored to your dreams.
+              We craft unforgettable journeys tailored to your dreams since 2006.
             </p>
           </div>
 
+          {/* South India Packages */}
           <div>
-            <h4 className="font-semibold font-display text-secondary-foreground mb-4">South India Packages</h4>
-            <ul className="space-y-2 text-sm font-body">
-              <li><Link to="/packages" className="hover:text-primary transition-colors">Kerala Tour Packages</Link></li>
-              <li><Link to="/packages" className="hover:text-primary transition-colors">Tamil Nadu Tour Packages</Link></li>
-              <li><Link to="/packages" className="hover:text-primary transition-colors">Karnataka Tour Packages</Link></li>
-              <li><Link to="/packages" className="hover:text-primary transition-colors">Andhra Pradesh Packages</Link></li>
-              <li><Link to="/packages" className="hover:text-primary transition-colors">Pondicherry Packages</Link></li>
-              <li><Link to="/packages" className="hover:text-primary transition-colors">Telangana Tour Packages</Link></li>
+            <span style={headingStyle}>South India Packages</span>
+            <ul style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+              {["Kerala Tour Packages", "Tamil Nadu Tour Packages", "Karnataka Tour Packages", "Andhra Pradesh Packages", "Pondicherry Packages"].map((item) => (
+                <li key={item}>
+                  <Link to="/packages" style={linkStyleOrange}
+                    onMouseEnter={e => (e.currentTarget.style.opacity = "0.75")}
+                    onMouseLeave={e => (e.currentTarget.style.opacity = "1")}
+                  >
+                    {item}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
+          {/* Quick Links */}
           <div>
-            <h4 className="font-semibold font-display text-secondary-foreground mb-4">Quick Links</h4>
-            <ul className="space-y-2 text-sm font-body">
-              <li><Link to="/" className="hover:text-primary transition-colors">Home</Link></li>
-              <li><Link to="/about" className="hover:text-primary transition-colors">About Us</Link></li>
-              <li><Link to="/packages" className="hover:text-primary transition-colors">All Packages</Link></li>
-              <li><Link to="/testimonials" className="hover:text-primary transition-colors">Testimonials</Link></li>
-              <li><Link to="/contact" className="hover:text-primary transition-colors">Contact</Link></li>
+            <span style={headingStyle}>Quick Links</span>
+            <ul style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+              {[
+                { label: "Home", to: "/" },
+                { label: "About Us", to: "/about" },
+                { label: "All Packages", to: "/packages" },
+                { label: "Testimonials", to: "/testimonials" },
+                { label: "Contact", to: "/contact" },
+              ].map((item) => (
+                <li key={item.label}>
+                  <Link to={item.to} style={linkStyleMuted}
+                    onMouseEnter={e => (e.currentTarget.style.color = "#f97316")}
+                    onMouseLeave={e => (e.currentTarget.style.color = "#94a3b8")}
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
+          {/* Contact Us */}
           <div>
-            <h4 className="font-semibold font-display text-secondary-foreground mb-4">Contact Us</h4>
-            <div className="space-y-3 text-sm font-body">
+            <span style={headingStyle}>Contact Us</span>
+            <div style={{ display: "flex", flexDirection: "column", gap: "12px", ...bodyStyle }}>
               <div className="flex items-start gap-3">
-                <MapPin className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
-                <p>123, Main Road, Near Bus Stand,<br />Chennai, Tamil Nadu 600001</p>
+                <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5" style={{ color: "#f97316" }} />
+                <p style={bodyStyle}>123, Main Road, Near Bus Stand,<br />Chennai, Tamil Nadu 600001</p>
+              </div>
+              <div className="flex items-start gap-3">
+                <Phone className="w-4 h-4 flex-shrink-0 mt-1" style={{ color: "#f97316" }} />
+                <div style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
+                  {["+91 98945 55553", "+91 94425 55553", "+91 98947 70505", "+91 98430 51148"].map((num, i) => (
+                    <a key={i} href={`tel:${num.replace(/\s/g, "")}`} style={{ ...linkStyleOrange }}
+                      onMouseEnter={e => (e.currentTarget.style.opacity = "0.75")}
+                      onMouseLeave={e => (e.currentTarget.style.opacity = "1")}
+                    >{num}</a>
+                  ))}
+                </div>
               </div>
               <div className="flex items-center gap-3">
-                <Phone className="w-4 h-4 text-primary flex-shrink-0" />
-                <a href="tel:+919876543210" className="hover:text-primary transition-colors">+91 98765 43210</a>
+                <Mail className="w-4 h-4 flex-shrink-0" style={{ color: "#f97316" }} />
+                <a href="mailto:skttravels22@gmail.com" style={linkStyleOrange}
+                  onMouseEnter={e => (e.currentTarget.style.opacity = "0.75")}
+                  onMouseLeave={e => (e.currentTarget.style.opacity = "1")}
+                >skttravels22@gmail.com</a>
               </div>
               <div className="flex items-center gap-3">
-                <Mail className="w-4 h-4 text-primary flex-shrink-0" />
-                <a href="mailto:info@sdktours.com" className="hover:text-primary transition-colors">info@sdktours.com</a>
+                <Instagram className="w-4 h-4 flex-shrink-0" style={{ color: "#f97316" }} />
+                <a href="https://www.instagram.com/skt_tours_and_travels_cbe?igsh=MWgzOGZxZzVtdTdxaQ==" target="_blank" rel="noopener noreferrer"
+                  style={linkStyleOrange}
+                  onMouseEnter={e => (e.currentTarget.style.opacity = "0.75")}
+                  onMouseLeave={e => (e.currentTarget.style.opacity = "1")}
+                >Instagram</a>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="border-t border-secondary-foreground/10 mt-12 pt-6 text-center">
-          <p className="text-sm text-secondary-foreground/50 font-body">
-            © 2026 SDK Tours & Travels. All rights reserved.
+        {/* Bottom Bar */}
+        <div style={{ borderTop: "1px solid rgba(255,255,255,0.08)", marginTop: "48px", paddingTop: "24px", textAlign: "center", display: "flex", flexDirection: "column", gap: "8px" }}>
+          <p style={{ ...bodyStyle, color: "#ffffff" }}>
+            © 2006-2026 SKT tours and travels. All rights reserved.
+          </p>
+          <p style={{ ...bodyStyle, color: "#ffffff", display: "flex", alignItems: "center", justifyContent: "center", gap: "5px" }}>
+            Made with <span style={{ color: "#ef4444" }}>♥</span> by{" "}
+            <a
+              href="https://www.technovuz.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: "#94a3b8", fontWeight: 600, textDecoration: "underline", textUnderlineOffset: "3px" }}
+              onMouseEnter={e => (e.currentTarget.style.color = "#f97316")}
+              onMouseLeave={e => (e.currentTarget.style.color = "#94a3b8")}
+            >
+              Technovuz
+            </a>
           </p>
         </div>
       </div>

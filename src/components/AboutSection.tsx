@@ -1,5 +1,5 @@
 import { Shield, Users, Map, Headphones } from "lucide-react";
-import aboutImg from "@/assets/about-travel.jpg";
+import aboutImg from "@/assets/about.png";
 
 const features = [
   { icon: Shield, title: "Safe Travel", desc: "Your safety is our top priority on every trip" },
@@ -32,10 +32,10 @@ const AboutSection = () => {
             <h2 className="mb-2">Why Choose Us</h2>
             <h3 className="mb-6">
               Stress-free Holidays with<br/>
-              <span className="text-[#f97316]">SDK Tours & Travels</span>
+              <span className="text-[#f97316]">SKT tours and travels</span>
             </h3>
             <p className="mb-8 leading-relaxed">
-              SDK Tours & Travels is one of the leading travel agencies in South India.
+              SKT tours and travels is one of the leading travel agencies in South India.
               We make sure your next trip is truly special. Our friendly and experienced team
               plans everything based on your needs, so you can enjoy a holiday filled with great memories.
             </p>

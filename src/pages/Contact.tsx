@@ -47,9 +47,12 @@ const Contact = () => {
                       <div className="bg-primary/10 p-3 rounded-xl">
                         <Phone className="w-6 h-6 text-primary" />
                       </div>
-                      <div>
-                        <h4 className="font-semibold text-secondary-foreground">Phone Number</h4>
-                        <a href="tel:+919876543210" className="text-secondary-foreground/70 text-sm hover:text-primary transition-colors">+91 98765 43210</a>
+                      <div className="flex flex-col gap-1">
+                        <h4 className="font-semibold text-secondary-foreground">Phone Numbers</h4>
+                        <a href="tel:+919894555553" className="text-secondary-foreground/70 text-sm hover:text-primary transition-colors">+91 98945 55553</a>
+                        <a href="tel:+919442555553" className="text-secondary-foreground/70 text-sm hover:text-primary transition-colors">+91 94425 55553</a>
+                        <a href="tel:+919894770505" className="text-secondary-foreground/70 text-sm hover:text-primary transition-colors">+91 98947 70505</a>
+                        <a href="tel:+919843051148" className="text-secondary-foreground/70 text-sm hover:text-primary transition-colors">+91 98430 51148</a>
                       </div>
                     </div>
 
@@ -59,7 +62,7 @@ const Contact = () => {
                       </div>
                       <div>
                         <h4 className="font-semibold text-secondary-foreground">Email Address</h4>
-                        <a href="mailto:info@sdktours.com" className="text-secondary-foreground/70 text-sm hover:text-primary transition-colors">info@sdktours.com</a>
+                        <a href="mailto:skttravels22@gmail.com" className="text-secondary-foreground/70 text-sm hover:text-primary transition-colors">skttravels22@gmail.com</a>
                       </div>
                     </div>
                   </div>

@@ -1,39 +1,45 @@
-import { Globe, Home, Heart, Landmark, Ticket, ArrowRight } from "lucide-react";
+import { Home, Heart, Landmark, Ticket } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+import domesticImg from "../assets/domestic.jpg";
+import honeymoonImg from "../assets/honeymoon.jpg";
+import pilgrimImg from "../assets/pilgrim.jpg";
+import travelsImg from "../assets/travels.png";
+import viewBtnImg from "../assets/view.png";
 
 const categories = [
-  // {
-  //   title: "International",
-  //   image: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&q=80&w=400",
-  //   icon: Globe,
-  //   color: "text-orange-500",
-  // },
   {
     title: "Domestic",
-    image: "https://images.unsplash.com/photo-1548013146-72479768bbaa?auto=format&fit=crop&q=80&w=400",
+    description: "Discover South India's rich culture, flavors, and thrilling adventures with our domestic tours.",
+    image: domesticImg,
     icon: Home,
     color: "text-orange-500",
   },
   {
     title: "Honeymoon",
-    image: "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&q=80&w=400",
+    description: "Explore dreamy destinations, private retreats, and romantic vibes for your perfect honeymoon.",
+    image: honeymoonImg,
     icon: Heart,
     color: "text-orange-500",
   },
   {
     title: "Pilgrimage",
-    image: "https://images.unsplash.com/photo-1627814400192-38d4982c57c2?auto=format&fit=crop&q=80&w=400",
+    description: "Dive into the spiritual traditions, sacred temples, and divine experiences across South India.",
+    image: pilgrimImg,
     icon: Landmark,
     color: "text-orange-500",
   },
   {
     title: "Travells",
-    image: "https://images.unsplash.com/photo-1569336415962-a4bd9f6dfc0f?auto=format&fit=crop&q=80&w=400",
+    description: "Efficient and comfortable travel services for all your local and long-distance journeys.",
+    image: travelsImg,
     icon: Ticket,
     color: "text-orange-500",
   },
 ];
 
 const CategorySection = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="relative py-20 bg-white overflow-hidden">
       {/* Palm Leaf Decorative (Right Side) */}
@@ -56,12 +62,15 @@ const CategorySection = () => {
                Explore The World With Us!
              </h3>
           </div>
-          <button className="bg-[#1f2937] text-white px-7 py-2.5 rounded-lg text-[15px] font-bold hover:bg-orange-500 transition-colors shadow-md transform -translate-y-2">
+          <button 
+            onClick={() => navigate("/packages")}
+            className="bg-[#1f2937] text-white px-7 py-2.5 rounded-lg text-[15px] font-bold hover:bg-orange-500 transition-colors shadow-md transform -translate-y-2"
+          >
              All packages
           </button>
         </div>
 
-        {/* Categories Grid (OVAL SHAPES) */}
+        {/* Categories Grid (OVAL SHAPES - RESTORED) */}
         <div className="flex flex-wrap justify-center gap-8 md:gap-12 lg:gap-16">
           {categories.map((cat, idx) => (
             <div key={idx} className="flex flex-col items-center group cursor-pointer w-[210px]">
@@ -71,7 +80,11 @@ const CategorySection = () => {
                  
                  {/* Oval Image Container */}
                  <div className="w-[210px] h-[315px] rounded-[999px] overflow-hidden shadow-2xl">
-                    <img src={cat.image} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt={cat.title} />
+                    <img 
+                      src={cat.image} 
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" 
+                      alt={cat.title} 
+                    />
                  </div>
                  
                  {/* Floating Icon Circle overlapping bottom edge */}
