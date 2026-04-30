@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@400;500;600;700&family=Jost:wght@300;400;500;600;700&family=Kaushan+Script&family=Caveat:wght@400;700&family=Dancing+Script:wght@400;700&display=swap');
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 @layer base {
   :root {
@@ -74,30 +74,47 @@
   }
 
   h1 {
-    font-size: 40px !important;
+    font-size: 32px;
     color: #212529;
     font-weight: 500;
+  }
+
+  @media (min-width: 768px) {
+    h1 { font-size: 40px; }
   }
 
   h2,
   .title-cursive {
     font-family: 'Dancing Script', cursive !important;
-    font-size: 25px !important;
+    font-size: 22px !important;
     color: #F0870D !important;
-    font-weight: 400;
+    font-weight: 400 !important;
+    line-height: 1.4 !important;
+  }
+
+  @media (min-width: 768px) {
+    h2, .title-cursive { font-size: 25px !important; }
   }
 
   h3 {
-    font-size: 28px !important;
+    font-size: 24px;
     font-weight: bolder !important;
     color: #212529 !important;
   }
 
+  @media (min-width: 768px) {
+    h3 { font-size: 28px; }
+  }
+
   p {
-    font-size: 18px;
+    font-size: 16px;
     color: #666666;
     font-family: 'Jost', sans-serif;
     margin-bottom: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    p { font-size: 18px; }
   }
 
   a,

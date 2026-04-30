@@ -10,6 +10,7 @@ import Testimonials from "./pages/Testimonials.tsx";
 import Contact from "./pages/Contact.tsx";
 import Travells from "./pages/Travells.tsx";
 import Service from "./pages/Service.tsx";
+import Honeymoon from "./pages/Honeymoon.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 import ScrollToTop from "./components/ScrollToTop";
@@ -31,6 +32,7 @@ const App = () => (
           <Route path="/contact" element={<Contact />} />
           <Route path="/travells" element={<Travells />} />
           <Route path="/service" element={<Service />} />
+          <Route path="/honeymoon" element={<Honeymoon />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -58,39 +58,39 @@ const ClientTestimonialsSection = () => {
           </h3>
         </div>
 
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-4 md:gap-8 relative min-h-[500px] max-w-7xl mx-auto">
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-8 relative min-h-[500px] max-w-7xl mx-auto">
           {/* Left Side: Big Image (Even Bigger) */}
-          <div className="w-full lg:w-[60%] flex justify-end relative pr-4 md:pr-12">
+          <div className="w-full lg:w-[60%] flex justify-center lg:justify-end relative px-4 lg:pr-12">
              {/* Left Arrow */}
             <button 
               onClick={handlePrev}
-              className="absolute left-[-10px] md:left-[-30px] top-1/2 -translate-y-1/2 z-30 transition-transform hover:scale-110 active:scale-95"
+              className="absolute left-0 md:left-[-20px] lg:left-[-30px] top-1/2 -translate-y-1/2 z-30 transition-transform hover:scale-110 active:scale-95"
             >
-              <img src={leftArrow} alt="Previous" className="w-[85px] h-[85px] md:w-[100px] md:h-[100px] object-contain" />
+              <img src={leftArrow} alt="Previous" className="w-[60px] h-[60px] md:w-[80px] md:h-[80px] lg:w-[100px] lg:h-[100px] object-contain" />
             </button>
 
             <div className="w-full max-w-[700px] aspect-[1.6/1] flex justify-center items-center overflow-hidden">
               <img 
                 src={trekkingImg} 
                 alt="Trekking Experience" 
-                className="w-full h-full object-contain select-none scale-110"
+                className="w-full h-full object-contain select-none scale-100 lg:scale-110"
               />
             </div>
           </div>
 
           {/* Right Side: Content */}
-          <div className="w-full lg:w-[40%] flex flex-col items-start text-center lg:text-left px-4 relative">
+          <div className="w-full lg:w-[40%] flex flex-col items-center lg:items-start text-center lg:text-left px-4 relative">
             {/* Right Arrow */}
             <button 
               onClick={handleNext}
-              className="absolute right-[-10px] lg:right-[-60px] top-1/2 -translate-y-1/2 z-30 transition-transform hover:scale-110 active:scale-95"
+              className="absolute right-0 md:right-[-20px] lg:right-[-60px] top-1/2 -translate-y-1/2 z-30 transition-transform hover:scale-110 active:scale-95"
             >
-              <img src={rightArrow} alt="Next" className="w-[85px] h-[85px] md:w-[100px] md:h-[100px] object-contain" />
+              <img src={rightArrow} alt="Next" className="w-[60px] h-[60px] md:w-[80px] md:h-[80px] lg:w-[100px] lg:h-[100px] object-contain" />
             </button>
 
             <div className={`flex flex-col items-center lg:items-start space-y-6 max-w-md transition-all duration-300 ${isAnimating ? 'opacity-0 translate-x-4' : 'opacity-100 translate-x-0'}`}>
               {/* Profile Image with Brush Border */}
-              <div className="relative w-32 h-32 mb-2">
+              <div className="relative w-24 h-24 md:w-32 md:h-32 mb-2">
                 <div className="w-full h-full rounded-full overflow-hidden shadow-xl border-4 border-white">
                   <img 
                     src={testimonials[current].image} 
@@ -102,15 +102,15 @@ const ClientTestimonialsSection = () => {
               </div>
 
               <div className="space-y-4">
-                <h4 className="text-2xl font-bold text-orange-500 leading-tight">
+                <h4 className="text-xl md:text-2xl font-bold text-orange-500 leading-tight">
                   {testimonials[current].title}
                 </h4>
-                <p className="text-lg text-gray-600 leading-relaxed italic">
+                <p className="text-base md:text-lg text-gray-600 leading-relaxed italic">
                   "{testimonials[current].text}"
                 </p>
                 
                 <div className="pt-2">
-                  <h5 className="text-xl font-bold text-[#1f2937]">
+                  <h5 className="text-lg md:text-xl font-bold text-[#1f2937]">
                     {testimonials[current].name}
                   </h5>
                   <div className="flex justify-center lg:justify-start gap-1 mt-1">

@@ -58,23 +58,23 @@ const Service = () => {
                     alt="South India Travel" 
                     className="w-full h-auto rounded-[60px] shadow-2xl border-[15px] border-white transition-transform duration-700 group-hover:scale-[1.02]" 
                    />
-                   <div className="absolute -bottom-10 -right-10 bg-orange-500 w-48 h-48 rounded-full flex flex-col items-center justify-center text-white shadow-2xl animate-floating border-8 border-white">
-                      <p className="text-4xl font-black">10+</p>
-                      <p className="text-xs font-bold uppercase tracking-widest">Years of Trust</p>
+                    <div className="absolute -bottom-5 -right-5 md:-bottom-10 md:-right-10 bg-orange-500 w-32 h-32 md:w-48 md:h-48 rounded-full flex flex-col items-center justify-center text-white shadow-2xl animate-floating border-4 md:border-8 border-white z-20">
+                      <p className="text-2xl md:text-4xl font-black">10+</p>
+                      <p className="text-[10px] md:text-xs font-bold uppercase tracking-widest">Years of Trust</p>
                    </div>
                 </div>
                 {/* Decorative dots */}
-                <div className="absolute -top-10 -left-10 w-32 h-32 opacity-10 bg-[radial-gradient(#f97316_2px,transparent_2px)] [background-size:16px_16px]" />
+                <div className="absolute -top-10 -left-10 w-32 h-32 opacity-10 bg-[radial-gradient(#f97316_2px,transparent_2px)] [background-size:16px_16px] hidden md:block" />
             </div>
             <div className="w-full lg:w-1/2">
-              <h2 className="mb-2" style={{ fontFamily: "'Dancing Script', cursive", color: "#F0870D", fontSize: "28px" }}>
+              <h2 className="mb-2 text-[22px] md:text-[28px]" style={{ fontFamily: "'Dancing Script', cursive", color: "#F0870D" }}>
                 Discover the Magic of South India
               </h2>
-              <h3 className="text-4xl md:text-6xl font-bold mb-8 text-[#212529] leading-tight" style={{ fontFamily: "'Cormorant Infant', serif" }}>
+              <h3 className="text-3xl md:text-6xl font-bold mb-6 md:mb-8 text-[#212529] leading-tight" style={{ fontFamily: "'Cormorant Infant', serif" }}>
                 Expert Travel <br />
                 <span className="text-orange-500">Service Solutions</span>
               </h3>
-              <p className="text-lg text-gray-600 mb-8 leading-relaxed font-body">
+              <p className="text-base md:text-lg text-gray-600 mb-8 leading-relaxed font-body">
                 SKT Tours and Travels is exclusively dedicated to showcasing the unparalleled beauty of South India. From the mist-covered tea gardens of Munnar to the architectural marvels of Hampi, we provide specialized travel services that ensure you experience the true essence of the South.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
@@ -87,7 +87,7 @@ const Service = () => {
                   </div>
                 ))}
               </div>
-              <button className="bg-[#222] text-white px-12 py-5 rounded-2xl font-black text-sm uppercase hover:bg-orange-500 transition-all shadow-xl hover:-translate-y-1">
+              <button className="w-full sm:w-auto bg-[#222] text-white px-12 py-5 rounded-2xl font-black text-sm uppercase hover:bg-orange-500 transition-all shadow-xl hover:-translate-y-1">
                 Explore More
               </button>
             </div>
@@ -102,14 +102,14 @@ const Service = () => {
              style={{ backgroundImage: `url('https://www.transparenttextures.com/patterns/world-map.png')` }} />
         
         <div className="container mx-auto px-6 relative z-10 text-center">
-          <h2 className="mb-2" style={{ fontFamily: "'Dancing Script', cursive", color: "#F0870D", fontSize: "28px" }}>
+          <h2 className="mb-2 text-[22px] md:text-[28px]" style={{ fontFamily: "'Dancing Script', cursive", color: "#F0870D" }}>
             Let us help you plan your next adventure
           </h2>
-          <h3 className="text-4xl md:text-6xl font-bold mb-24 text-[#212529]" style={{ fontFamily: "'Cormorant Infant', serif" }}>
+          <h3 className="text-3xl md:text-6xl font-bold mb-12 md:mb-24 text-[#212529]" style={{ fontFamily: "'Cormorant Infant', serif" }}>
             Perfect Vacation Come True
           </h3>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-24">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12 md:gap-x-12 md:gap-y-24">
             {serviceCategories.map((s, idx) => (
               <div key={idx} className="flex flex-col items-center group">
                 <div className="mb-10 relative">
@@ -141,14 +141,14 @@ const Service = () => {
       <section className="relative py-40 flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-black/40 z-10" />
         <div 
-          className="absolute inset-0 bg-cover bg-fixed bg-center transition-transform duration-[3s] scale-110"
+          className="absolute inset-0 bg-cover bg-fixed bg-center transition-transform duration-3000 scale-110"
           style={{ backgroundImage: `url(${serviceImg2})` }}
         />
         <div className="relative z-20 text-center text-white px-6">
-          <h2 className="text-4xl md:text-6xl font-bold mb-10 max-w-4xl mx-auto leading-tight" style={{ fontFamily: "'Cormorant Infant', serif" }}>
+          <h1 className="text-4xl md:text-6xl font-bold mb-10 max-w-4xl mx-auto leading-tight" style={{ fontFamily: "'Cormorant Infant', serif" }}>
             Experience the Serenity of <br />
             <span className="text-orange-500">South Indian Coastal Paradise</span>
-          </h2>
+          </h1>
           <p className="text-lg md:text-xl mb-12 max-w-2xl mx-auto font-body opacity-90">
             From the backwaters of Kerala to the shores of Gokarna, discover the finest coastal getaways with our expert guidance.
           </p>

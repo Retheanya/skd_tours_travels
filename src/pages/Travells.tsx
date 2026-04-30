@@ -173,7 +173,7 @@ const Travells = () => {
       {/* Services Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-6">
-          <h2 className="mb-2 text-center">Taxi Solutions</h2>
+          <h3 className="mb-2 text-center">Taxi Solutions</h3>
           <h3 className="text-3xl md:text-4xl mb-16 text-center">
             Comprehensive <span className="text-orange-500">Solutions</span>
           </h3>
@@ -223,7 +223,7 @@ const Travells = () => {
       {/* FAQ Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-6 max-w-4xl">
-          <h2 className="mb-2 text-center">Common Queries</h2>
+          <h3 className="mb-2 text-center">Common Queries</h3>
           <h3 className="text-3xl md:text-4xl mb-12 text-center">
             Frequently Asked <span className="text-orange-500">Questions</span>
           </h3>

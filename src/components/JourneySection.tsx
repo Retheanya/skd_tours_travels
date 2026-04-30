@@ -28,21 +28,21 @@ const JourneySection = () => {
             <strong className="text-[#333]">SKT tours and travels</strong> is one of the <strong className="text-[#333]">best travel agency in South India</strong>. We make your next trip is truly special. Our friendly and experienced team plans everything based on your needs, so you can enjoy a holiday with great memories.
           </p>
 
-          <div className="flex gap-12 sm:gap-16 py-8 border-t border-gray-100 border-b w-max pr-8">
-            <div>
-              <h3 className="text-4xl sm:text-[42px] font-bold text-[#1f2937] mb-1" style={{ fontFamily: "'Cormorant Infant', serif" }}>
+          <div className="flex flex-wrap gap-8 md:gap-16 py-8 border-t border-gray-100 border-b">
+            <div className="min-w-[100px]">
+              <h3 className="text-3xl md:text-[42px] font-bold text-[#1f2937] mb-1" style={{ fontFamily: "'Cormorant Infant', serif" }}>
                 15<span className="text-[#1f2937] text-2xl font-serif">+</span>
               </h3>
               <p className="text-[13px] font-semibold text-[#666]">Years Experience</p>
             </div>
-            <div>
-              <h3 className="text-4xl sm:text-[42px] font-bold text-[#1f2937] mb-1" style={{ fontFamily: "'Cormorant Infant', serif" }}>
+            <div className="min-w-[100px]">
+              <h3 className="text-3xl md:text-[42px] font-bold text-[#1f2937] mb-1" style={{ fontFamily: "'Cormorant Infant', serif" }}>
                 100<span className="text-[#1f2937] text-2xl font-serif">%</span>
               </h3>
               <p className="text-[13px] font-semibold text-[#666]">Happy Clients</p>
             </div>
-            <div>
-              <h3 className="text-4xl sm:text-[42px] font-bold text-[#1f2937] mb-1" style={{ fontFamily: "'Cormorant Infant', serif" }}>
+            <div className="min-w-[100px]">
+              <h3 className="text-3xl md:text-[42px] font-bold text-[#1f2937] mb-1" style={{ fontFamily: "'Cormorant Infant', serif" }}>
                 4,000<span className="text-[#1f2937] text-2xl font-serif">+</span>
               </h3>
               <p className="text-[13px] font-semibold text-[#666]">Packages</p>

@@ -73,6 +73,7 @@ const Footer = () => {
                 { label: "Home", to: "/" },
                 { label: "About Us", to: "/about" },
                 { label: "All Packages", to: "/packages" },
+                { label: "Honeymoon", to: "/honeymoon" },
                 { label: "Testimonials", to: "/testimonials" },
                 { label: "Contact", to: "/contact" },
               ].map((item) => (

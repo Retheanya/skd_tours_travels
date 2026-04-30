@@ -14,7 +14,7 @@ const NotFound = () => {
       <div className="flex min-h-[60vh] items-center justify-center bg-background px-4">
         <div className="text-center max-w-md">
           <h1 className="text-8xl font-bold font-display text-primary/20 mb-4 tracking-tighter">404</h1>
-          <h2 className="text-3xl font-bold font-display text-secondary-foreground mb-4">You've reached a dead end</h2>
+          <h1 className="text-3xl font-bold font-display text-secondary-foreground mb-4">You've reached a dead end</h1>
           <p className="text-secondary-foreground/70 font-body mb-8">
             The destination you're looking for doesn't exist or has been moved to a new secret location.
           </p>
