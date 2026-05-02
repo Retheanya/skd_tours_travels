@@ -1,15 +1,19 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { 
   MapPin, 
   Search, 
   ChevronLeft, 
   ChevronRight, 
   Clock,
-  Navigation
+  Navigation,
+  Map,
+  PlaneTakeoff
 } from "lucide-react";
 import carousel1 from "../assets/carousel1.png";
 import carousel2 from "../assets/carousel2.png";
 import carousel3 from "../assets/carousel3.png";
+
 
 const slides = [
   {
@@ -33,7 +37,19 @@ const slides = [
 ];
 
 const HeroSection = () => {
+  const navigate = useNavigate();
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [destination, setDestination] = useState("All Destination");
+  const [duration, setDuration] = useState("All Duration");
+
+  const handleSearch = () => {
+    const params = new URLSearchParams();
+    if (searchTerm) params.set("search", searchTerm);
+    if (destination !== "All Destination") params.set("dest", destination);
+    if (duration !== "All Duration") params.set("duration", duration);
+    navigate(`/honeymoon?${params.toString()}`);
+  };
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -171,29 +187,60 @@ const HeroSection = () => {
                       <div className="flex-1 p-4 md:p-5 border-b md:border-b-0 md:border-r border-gray-100 flex items-center justify-between group">
                           <div>
                               <p className="text-[10px] font-black text-orange-400 uppercase tracking-widest mb-0.5">Location</p>
-                              <input type="text" placeholder="Where?" className="bg-transparent outline-none text-base font-bold text-[#4B4A4A] placeholder:text-gray-300 w-full" />
+                              <input 
+                                type="text" 
+                                placeholder="Where to next?" 
+                                value={searchTerm}
+                                onChange={(e) => setSearchTerm(e.target.value)}
+                                className="bg-transparent outline-none text-base font-bold text-[#4B4A4A] placeholder:text-gray-300 w-full" 
+                              />
                           </div>
                           <MapPin className="w-5 h-5 text-gray-300 group-hover:text-orange-500 transition-colors" />
                       </div>
                       <div className="flex-1 p-4 md:p-5 border-b md:border-b-0 md:border-r border-gray-100 flex items-center justify-between group">
                           <div>
                               <p className="text-[10px] font-black text-orange-400 uppercase tracking-widest mb-0.5">Destinations</p>
-                              <select className="bg-transparent outline-none text-base font-bold text-[#4B4A4A] appearance-none cursor-pointer w-full">
+                              <select 
+                                value={destination}
+                                onChange={(e) => setDestination(e.target.value)}
+                                className="bg-transparent outline-none text-base font-bold text-[#4B4A4A] appearance-none cursor-pointer w-full"
+                              >
                                   <option>All Destination</option>
+                                  <option value="Munnar">Munnar</option>
+                                  <option value="Alleppey">Alleppey</option>
+                                  <option value="Coorg">Coorg</option>
+                                  <option value="Ooty">Ooty</option>
+                                  <option value="Goa">Goa</option>
+                                  <option value="Pondicherry">Pondicherry</option>
+                                  <option value="Yercaud">Yercaud</option>
+                                  <option value="Chikmagalur">Chikmagalur</option>
+                                  <option value="Wayanad">Wayanad</option>
+                                  <option value="Kodaikanal">Kodaikanal</option>
+                                  <option value="Mangalore">Mangalore</option>
                               </select>
                           </div>
-                          <Navigation className="w-5 h-5 text-gray-300 group-hover:text-orange-500 transition-colors" />
+                          <Map className="w-5 h-5 text-gray-300 group-hover:text-orange-500 transition-colors" />
                       </div>
                       <div className="flex-1 p-4 md:p-5 border-b md:border-b-0 md:border-r border-gray-100 flex items-center justify-between group">
                           <div>
                               <p className="text-[10px] font-black text-orange-400 uppercase tracking-widest mb-0.5">Duration</p>
-                              <select className="bg-transparent outline-none text-base font-bold text-[#4B4A4A] appearance-none cursor-pointer w-full">
+                              <select 
+                                value={duration}
+                                onChange={(e) => setDuration(e.target.value)}
+                                className="bg-transparent outline-none text-base font-bold text-[#4B4A4A] appearance-none cursor-pointer w-full"
+                              >
                                   <option>All Duration</option>
+                                  <option>2 Days</option>
+                                  <option>3 Days</option>
+                                  <option>4 Days</option>
+                                  <option>5 Days</option>
+                                  <option>6 Days</option>
+                                  <option>7 Days</option>
                               </select>
                           </div>
-                          <Clock className="w-5 h-5 text-gray-400 group-hover:text-orange-500 transition-colors" />
+                          <PlaneTakeoff className="w-5 h-5 text-gray-400 group-hover:text-orange-500 transition-colors" />
                       </div>
-                      <button className="bg-orange-500 hover:bg-[#222] transition-all py-4 md:px-12 flex items-center justify-center group">
+                      <button onClick={handleSearch} className="bg-orange-500 hover:bg-[#222] transition-all py-4 md:px-12 flex items-center justify-center group">
                           <Search className="w-6 h-6 md:w-8 md:h-8 text-white group-hover:scale-125 transition-transform" />
                       </button>
                   </div>

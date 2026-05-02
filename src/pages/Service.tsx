@@ -1,4 +1,5 @@
 import Layout from "@/components/Layout";
+import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { CheckCircle, MapPin, Phone, Mail } from "lucide-react";
 import serviceImg1 from "../assets/service.png";
@@ -31,16 +32,16 @@ const Service = () => {
     <Layout>
       {/* 1. Hero Section */}
       <section className="relative h-[350px] flex items-center justify-center overflow-hidden bg-[#222]">
-        <div className="absolute inset-0 opacity-40">
-           <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2070&auto=format&fit=crop" alt="Hero" className="w-full h-full object-cover" />
+        <div className="absolute inset-0 z-0 opacity-80">
+           <img src={serviceImg2} alt="Services" className="w-full h-full object-cover" />
         </div>
         <div className="absolute inset-0 bg-orange-600/20 z-10" />
-        <div className="relative z-20 text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-white tracking-[0.2em] uppercase" style={{ fontFamily: "'Cormorant Infant', serif" }}>
+        <div className="relative z-20 text-center px-4">
+          <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold text-white tracking-[0.1em] sm:tracking-[0.2em] uppercase mb-2" style={{ fontFamily: "'Cormorant Infant', serif" }}>
             Services
           </h1>
           <div className="mt-4 flex items-center justify-center gap-2 text-white/90 text-sm font-bold uppercase tracking-widest">
-            <span className="hover:text-orange-500 cursor-pointer transition-colors">Home</span>
+            <Link to="/" className="hover:text-orange-500 cursor-pointer transition-colors">Home</Link>
             <span className="w-1 h-1 rounded-full bg-orange-500" />
             <span className="text-orange-500">Services</span>
           </div>

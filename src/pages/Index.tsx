@@ -9,7 +9,6 @@ import NextAdventureSection from "@/components/NextAdventureSection";
 import GallerySection from "@/components/GallerySection";
 import ClientTestimonialsSection from "@/components/ClientTestimonialsSection";
 import AboutSection from "@/components/AboutSection";
-import TestimonialsSection from "@/components/TestimonialsSection";
 
 const Index = () => {
   return (
@@ -24,7 +23,6 @@ const Index = () => {
       <NextAdventureSection />
       <GallerySection />
       <ClientTestimonialsSection />
-      <TestimonialsSection />
     </Layout>
   );
 };

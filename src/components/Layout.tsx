@@ -2,6 +2,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import { ReactNode, useState, useEffect } from "react";
 import { ChevronRight, Phone, ArrowUp } from "lucide-react";
+import { Link } from "react-router-dom";
 
 interface LayoutProps {
   children: ReactNode;
@@ -33,16 +34,16 @@ const Layout = ({ children }: LayoutProps) => {
         {children}
       </main>
       
-      {/* 1. Global Sticky Enquiry Button (Section 2 onwards) */}
+      {/* 1. Global Sticky Enquiry Button */}
       <div 
         className={`fixed top-1/2 -translate-y-1/2 right-0 z-[100] transition-all duration-500 transform ${
           showSticky ? "translate-x-0" : "translate-x-full"
         }`}
         style={{ width: '49.5px', height: '138px' }}
       >
-        <button className="w-full h-full bg-orange-500 text-white rounded-l-2xl shadow-2xl font-black text-[14px] [writing-mode:vertical-rl] tracking-widest uppercase flex flex-col items-center justify-center hover:bg-[#222] transition-colors group">
+        <Link to="/contact" className="w-full h-full bg-orange-500 text-white rounded-l-2xl shadow-2xl font-black text-[14px] [writing-mode:vertical-rl] tracking-widest uppercase flex flex-col items-center justify-center hover:bg-[#222] transition-colors group select-none">
             Enquiry Now
-        </button>
+        </Link>
       </div>
 
       {/* 2. Floating Action Buttons (Bottom Right) */}

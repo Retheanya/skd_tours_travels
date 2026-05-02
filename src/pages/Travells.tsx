@@ -1,4 +1,6 @@
 import Layout from "@/components/Layout";
+import { Link } from "react-router-dom";
+import chikmangalor1 from "../assets/chikmangalor1.jpg";
 import { CheckCircle, Car, Shield, Clock, MapPin, Star, Phone } from "lucide-react";
 import innovaImg from "../assets/innova.png";
 import etiosImg from "../assets/etios.png";
@@ -60,19 +62,24 @@ const Travells = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative h-[400px] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-black/60 z-10" />
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-1000 scale-105"
-          style={{ backgroundImage: `url('https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&w=2070&auto=format&fit=crop')` }}
-        />
-        <div className="relative z-20 text-center text-white px-4">
-          <h1 className="text-4xl md:text-6xl font-medium italic mb-4 tracking-tight text-white" style={{ fontFamily: "'Cormorant Infant', serif" }}>
-            Premium Taxi Services
+      <section className="relative h-[350px] flex items-center justify-center overflow-hidden bg-[#222]">
+        <div className="absolute inset-0 z-0 opacity-80">
+           <img 
+             src={chikmangalor1} 
+             alt="Travells" 
+             className="w-full h-full object-cover" 
+           />
+        </div>
+        <div className="absolute inset-0 bg-orange-600/20 z-10" />
+        <div className="relative z-20 text-center px-4">
+          <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold text-white tracking-[0.1em] sm:tracking-[0.2em] uppercase mb-2" style={{ fontFamily: "'Cormorant Infant', serif" }}>
+            Travells
           </h1>
-          <p className="text-lg md:text-xl font-medium max-w-2xl mx-auto opacity-90" style={{ fontFamily: "'Jost', sans-serif" }}>
-            Reliable, safe, and comfortable travel solutions with SKT Tours and Travels.
-          </p>
+          <div className="mt-4 flex items-center justify-center gap-2 text-white/90 text-sm font-bold uppercase tracking-widest">
+            <Link to="/" className="hover:text-orange-500 cursor-pointer transition-colors">Home</Link>
+            <span className="w-1 h-1 rounded-full bg-orange-500" />
+            <span className="text-orange-500">Travells</span>
+          </div>
         </div>
       </section>
 
