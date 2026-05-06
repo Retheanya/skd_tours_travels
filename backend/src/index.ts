@@ -163,19 +163,25 @@ import { defaultPackages } from "./seed/packages";
 // Seed Initial Data (Admin & Packages) if empty
 const seedDatabase = async () => {
   try {
-    // 1. Seed Admin User
-    const userCount = await User.countDocuments();
-    if (userCount === 0) {
-      const salt = await bcrypt.genSalt(10);
-      const hashedPassword = await bcrypt.hash("adminpassword123!", salt);
+    // 1. Seed/Synchronize Admin Users
+    const adminsToSeed = [
+      { email: "admin@skt.com", password: "adminpass", name: "Admin Skt" },
+      { email: "admin@skttravels.com", password: "adminpassword123!", name: "Admin SKD Travels" }
+    ];
 
-      await User.create({
-        name: "Admin User",
-        email: "admin@skttravels.com",
-        password: hashedPassword,
-        role: "admin",
-      });
-      console.log("Seeded default admin account: admin@skttravels.com / adminpassword123!");
+    for (const admin of adminsToSeed) {
+      const existing = await User.findOne({ email: admin.email });
+      if (!existing) {
+        const salt = await bcrypt.genSalt(10);
+        const hashedPassword = await bcrypt.hash(admin.password, salt);
+        await User.create({
+          name: admin.name,
+          email: admin.email,
+          password: hashedPassword,
+          role: "admin",
+        });
+        console.log(`Seeded admin account: ${admin.email}`);
+      }
     }
 
     // 2. Seed and Synchronize Default Travel Packages from seed file
