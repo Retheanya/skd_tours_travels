@@ -253,7 +253,6 @@ const seedDatabase = async () => {
   }
 };
 
-// Start Server
 const startServer = async () => {
   await connectDB();
   await seedDatabase();
@@ -265,6 +264,9 @@ const startServer = async () => {
   }
 };
 
-startServer();
+if (process.env.NODE_ENV !== "production") {
+  startServer();
+}
 
+export { seedDatabase };
 export default app;
