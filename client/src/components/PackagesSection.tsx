@@ -1,0 +1,225 @@
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import keralaImg from "@/assets/kerala.png";
+import tamilnaduImg from "@/assets/tamilnadu.png";
+import karnatakaImg from "@/assets/karnataka.png";
+import andhraImg from "@/assets/andhrapradesh.png";
+import pondicherryImg from "@/assets/pondichery.png";
+import viewBtnImg from "@/assets/view.png";
+import { apiService, TourPackage } from "@/lib/api";
+
+const defaultPackages: TourPackage[] = [
+  {
+    name: "Kerala",
+    slug: "kerala",
+    description: "Witness Kerala's wild nature, culture, and stunning landscapes.",
+    imageUrl: keralaImg,
+    subtitle: "Tourist Places",
+    categories: [
+      {
+        title: "Hill Stations",
+        items: ["Munnar", "Wayanad", "Thekkady", "Ponmudi"]
+      },
+      {
+        title: "Backwaters & Lakes",
+        items: ["Alleppey (Alappuzha)", "Kumarakom", "Ashtamudi"]
+      },
+      {
+        title: "Beaches & Culture",
+        items: ["Varkala", "Kovalam", "Trivandrum", "Kochi"]
+      }
+    ]
+  },
+  {
+    name: "Tamil Nadu",
+    slug: "tamil-nadu",
+    description: "Tour iconic sites, diverse landscapes, and culture of Tamil Nadu.",
+    imageUrl: tamilnaduImg,
+    subtitle: "Tourist Places",
+    categories: [
+      {
+        title: "Hill Stations & Nature",
+        items: ["Ooty", "Kodaikanal", "Yercaud", "Coonoor"]
+      },
+      {
+        title: "Temples & Heritage",
+        items: ["Madurai", "Rameswaram", "Thanjavur", "Kanchipuram"]
+      },
+      {
+        title: "Beaches & Cities",
+        items: ["Chennai", "Mahabalipuram", "Kanyakumari", "Pondicherry"]
+      }
+    ]
+  },
+  {
+    name: "Karnataka",
+    slug: "karnataka",
+    description: "Stroll through Karnataka's timeless history, modern charm, and delicious cuisine.",
+    imageUrl: karnatakaImg,
+    subtitle: "(including Goa, Coorg, etc.)",
+    categories: [
+      {
+        title: "Hill Stations & Nature",
+        items: ["Coorg (Kodagu)", "Chikmagalur", "Agumbe", "Nandi Hills"]
+      },
+      {
+        title: "Heritage & Architecture",
+        items: ["Hampi", "Mysore", "Badami", "Belur & Halebidu"]
+      },
+      {
+        title: "Beaches (Goa + Karnataka coast)",
+        items: ["Goa", "Gokarna", "Karwar", "Udupi"]
+      }
+    ]
+  },
+  {
+    name: "Andhra Pradesh",
+    slug: "andhra-pradesh",
+    description: "The Essence of Incredible India - Temples, beaches and more.",
+    imageUrl: andhraImg,
+    subtitle: "Tourist Places",
+    categories: [
+      {
+        title: "Hill & Nature",
+        items: ["Araku Valley", "Horsley Hills", "Lambasingi", "Belum Caves"]
+      },
+      {
+        title: "Temples & Spiritual",
+        items: ["Tirupati", "Srisailam", "Vijayawada", "Lepakshi"]
+      },
+      {
+        title: "Beaches & Cities",
+        items: ["Visakhapatnam (Vizag)", "Rushikonda Beach", "Borra Caves"]
+      }
+    ]
+  },
+  {
+    name: "Pondicherry",
+    slug: "pondicherry",
+    description: "The French Riviera of the East - A unique colonial experience.",
+    imageUrl: pondicherryImg,
+    subtitle: "French Riviera of the East",
+    categories: [
+      {
+        title: "Beaches & Ashrams",
+        items: ["Promenade Beach", "Auroville", "Sri Aurobindo Ashram", "Paradise Beach"]
+      },
+      {
+        title: "Heritage & Architecture",
+        items: ["French Quarter", "Basilica of the Sacred Heart", "Pondicherry Museum"]
+      }
+    ]
+  }
+];
+
+const PackagesSection = () => {
+  const navigate = useNavigate();
+  const [packages, setPackages] = useState<TourPackage[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    let isMounted = true;
+    const fetchPackages = async () => {
+      try {
+        setLoading(true);
+        const data = await apiService.getPackages();
+        if (isMounted) {
+          if (data && data.length > 0) {
+            setPackages(data);
+          } else {
+            // Fallback if no packages exist yet in DB
+            setPackages(defaultPackages);
+          }
+          setError(null);
+        }
+      } catch (err: any) {
+        console.error("Error fetching packages from API:", err);
+        if (isMounted) {
+          // Graceful fallback to static data
+          setPackages(defaultPackages);
+          setError("Using cached default data");
+        }
+      } finally {
+        if (isMounted) {
+          setLoading(false);
+        }
+      }
+    };
+
+    fetchPackages();
+    return () => {
+      isMounted = false;
+    };
+  }, []);
+
+  return (
+    <section id="packages" className="py-20 bg-[#fafafa]">
+      <div className="container mx-auto px-4">
+        <h2 className="text-center mb-2">
+          South India Tour Packages
+        </h2>
+        <h3 className="text-center mb-16">
+          Explore the Best of South India
+        </h3>
+
+        {loading ? (
+          <div className="flex flex-col items-center justify-center py-12">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-orange-500"></div>
+            <p className="mt-4 text-gray-600">Loading tour packages...</p>
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+            {packages.map((pkg, idx) => {
+              const packageSlug = pkg.slug || pkg.name.toLowerCase().replace(/\s+/g, "-");
+              return (
+                <div
+                  key={pkg._id || pkg.name}
+                  className="travel-card bg-white rounded-[20px] shadow-[0_10px_35px_rgba(0,0,0,0.06)] overflow-hidden transition-all duration-300 hover:-translate-y-2 animate-fade-in-up"
+                  style={{ animationDelay: `${idx * 150}ms` }}
+                >
+                  <div className="package-image-container p-3 pb-0">
+                    <div className="relative w-full overflow-hidden rounded-[15px] image-mask-effect">
+                      <img
+                        src={pkg.imageUrl || keralaImg}
+                        alt={pkg.name}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="p-4 pt-1 text-center flex flex-col items-center">
+                    <h4 className="text-xl font-bold mb-0.5 text-[#333] font-display">{pkg.name}</h4>
+                    {pkg.price && (
+                      <span className="text-sm font-extrabold text-orange-500 bg-orange-50 px-3 py-1 rounded-full mb-2 border border-orange-100" style={{ fontFamily: 'Jost, sans-serif' }}>
+                        {pkg.price}
+                      </span>
+                    )}
+                    <p className="mb-2 max-w-[280px] leading-tight" style={{ fontSize: '18px', color: '#666666', fontFamily: 'Jost, sans-serif' }}>
+                      {pkg.description}
+                    </p>
+                    
+                    <div className="pb-1">
+                      <button 
+                        onClick={() => navigate(`/state/${packageSlug}`)}
+                        className="view-packages-btn hover:scale-105 transition-transform duration-300 active:scale-95 cursor-pointer"
+                      >
+                        <img 
+                          src={viewBtnImg} 
+                          alt="View Packages" 
+                          className="w-[160px] h-auto"
+                        />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        )}
+      </div>
+    </section>
+  );
+};
+
+export default PackagesSection;

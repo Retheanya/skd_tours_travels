@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@400;500;600;700&family=Jost:wght@300;400;500;600;700&family=Kaushan+Script&family=Caveat:wght@400;700&family=Dancing+Script:wght@400;700&display=swap');
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer base {
+  :root {
+    --background: 30 33% 98%;
+    --foreground: 220 30% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 30% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 30% 15%;
+
+    --primary: 28 90% 52%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 60% 16%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 30 20% 94%;
+    --muted-foreground: 220 10% 46%;
+
+    --accent: 28 90% 52%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 30 15% 88%;
+    --input: 30 15% 88%;
+    --ring: 28 90% 52%;
+
+    --radius: 0.75rem;
+
+    --font-display: 'Cormorant Infant', serif;
+    --font-body: 'Jost', sans-serif;
+    --font-handwritten: 'Dancing Script', cursive;
+    --font-accent: 'Caveat', cursive;
+  }
+}
+
+@layer base {
+  :root {
+    --main-bg: #f8f9fa;
+    --var-bg: #ffffff;
+    --text-grey: #6c757d;
+    --accent-orange: #f97316;
+  }
+
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  body {
+    background-color: var(--main-bg);
+    color: var(--text-grey);
+    font-family: 'Cormorant Infant', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  h1,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Cormorant Infant', Arial, Helvetica, sans-serif !important;
+    line-height: 1.2;
+    letter-spacing: -0.025em;
+  }
+
+  h1 {
+    font-size: 32px;
+    color: #212529;
+    font-weight: 500;
+  }
+
+  @media (min-width: 768px) {
+    h1 { font-size: 40px; }
+  }
+
+  h2,
+  .title-cursive {
+    font-family: 'Dancing Script', cursive !important;
+    font-size: 22px !important;
+    color: #F0870D !important;
+    font-weight: 400 !important;
+    line-height: 1.4 !important;
+  }
+
+  @media (min-width: 768px) {
+    h2, .title-cursive { font-size: 25px !important; }
+  }
+
+  h3 {
+    font-size: 24px;
+    font-weight: bolder !important;
+    color: #212529 !important;
+  }
+
+  @media (min-width: 768px) {
+    h3 { font-size: 28px; }
+  }
+
+  p {
+    font-size: 16px;
+    color: #666666;
+    font-family: 'Jost', sans-serif;
+    margin-bottom: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    p { font-size: 18px; }
+  }
+
+  a,
+  button,
+  input,
+  select,
+  textarea {
+    font-family: 'Cormorant Infant', Arial, Helvetica, sans-serif;
+  }
+
+  a {
+    color: var(--accent-orange);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  a:hover {
+    color: #ea580c;
+  }
+}
+
+@layer components {
+  .text-gradient-primary {
+    background: linear-gradient(135deg, hsl(28, 90%, 52%), hsl(35, 95%, 58%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bg-gradient-primary {
+    background: linear-gradient(135deg, hsl(28, 90%, 52%), hsl(35, 95%, 58%));
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floating {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 1s ease-out forwards;
+}
+
+.animate-floating {
+  animation: floating 3.5s ease-in-out infinite;
+}
+
+/* Travel Card Styles */
+.travel-card {
+  width: 100%;
+  max-width: 380px;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+}
+
+.image-mask-effect {
+  position: relative;
+  background: white;
+  width: 100%;
+  height: 200px;
+  -webkit-mask-image: url('./assets/grunge_edge.png');
+  mask-image: url('./assets/grunge_edge.png');
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  padding: 12px; /* This creates the white frame effect */
+}
+
+.image-mask-effect img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px; /* Soft rounding as requested */
+}
+
+.view-packages-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+}
+
+.view-packages-btn img {
+  display: block;
+}
