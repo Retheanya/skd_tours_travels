@@ -3,7 +3,7 @@ export const defaultPackages = [
     name: "Kerala",
     slug: "kerala",
     description: "Witness Kerala's wild nature, culture, and stunning landscapes.",
-    imageUrl: "/src/assets/kerala.png",
+    imageUrl: "/assets/kerala.png",
     subtitle: "Tourist Places",
     categories: [
       {
@@ -20,19 +20,19 @@ export const defaultPackages = [
       }
     ],
     images: [
-      "/src/assets/kl1.jpg",
-      "/src/assets/kl2.jpg",
-      "/src/assets/kl3.jpg",
-      "/src/assets/kl4.jpg",
-      "/src/assets/kl5.jpg",
-      "/src/assets/kl6.jpg"
+      "/assets/kl1.jpg",
+      "/assets/kl2.jpg",
+      "/assets/kl3.jpg",
+      "/assets/kl4.jpg",
+      "/assets/kl5.jpg",
+      "/assets/kl6.jpg"
     ]
   },
   {
     name: "Tamil Nadu",
     slug: "tamil-nadu",
     description: "Tour iconic sites, diverse landscapes, and culture of Tamil Nadu.",
-    imageUrl: "/src/assets/tamilnadu.png",
+    imageUrl: "/assets/tamilnadu.png",
     subtitle: "Tourist Places",
     categories: [
       {
@@ -49,19 +49,19 @@ export const defaultPackages = [
       }
     ],
     images: [
-      "/src/assets/tn1.jpg",
-      "/src/assets/tn2.jpg",
-      "/src/assets/tn3.jpg",
-      "/src/assets/tn4.jpg",
-      "/src/assets/tn5.jpg",
-      "/src/assets/tn6.jpg"
+      "/assets/tn1.jpg",
+      "/assets/tn2.jpg",
+      "/assets/tn3.jpg",
+      "/assets/tn4.jpg",
+      "/assets/tn5.jpg",
+      "/assets/tn6.jpg"
     ]
   },
   {
     name: "Karnataka",
     slug: "karnataka",
     description: "Stroll through Karnataka's timeless history, modern charm, and delicious cuisine.",
-    imageUrl: "/src/assets/karnataka.png",
+    imageUrl: "/assets/karnataka.png",
     subtitle: "Tourist Places",
     categories: [
       {
@@ -78,19 +78,19 @@ export const defaultPackages = [
       }
     ],
     images: [
-      "/src/assets/kr1.jpg",
-      "/src/assets/kr2.jpg",
-      "/src/assets/kr3.jpg",
-      "/src/assets/kr4.jpg",
-      "/src/assets/kr5.jpg",
-      "/src/assets/kr6.jpg"
+      "/assets/kr1.jpg",
+      "/assets/kr2.jpg",
+      "/assets/kr3.jpg",
+      "/assets/kr4.jpg",
+      "/assets/kr5.jpg",
+      "/assets/kr6.jpg"
     ]
   },
   {
     name: "Andhra Pradesh",
     slug: "andhra-pradesh",
     description: "The Essence of Incredible India - Temples, beaches and more.",
-    imageUrl: "/src/assets/andhrapradesh.png",
+    imageUrl: "/assets/andhrapradesh.png",
     subtitle: "Tourist Places",
     categories: [
       {
@@ -107,19 +107,19 @@ export const defaultPackages = [
       }
     ],
     images: [
-      "/src/assets/ap1.jpg",
-      "/src/assets/ap2.jpg",
-      "/src/assets/ap3.jpg",
-      "/src/assets/ap4.jpg",
-      "/src/assets/ap5.jpg",
-      "/src/assets/ap6.jpg"
+      "/assets/ap1.jpg",
+      "/assets/ap2.jpg",
+      "/assets/ap3.jpg",
+      "/assets/ap4.jpg",
+      "/assets/ap5.jpg",
+      "/assets/ap6.jpg"
     ]
   },
   {
     name: "Pondicherry",
     slug: "pondicherry",
     description: "The French Riviera of the East - A unique colonial experience.",
-    imageUrl: "/src/assets/pondichery.png",
+    imageUrl: "/assets/pondichery.png",
     subtitle: "Tourist Places",
     categories: [
       {
@@ -132,12 +132,12 @@ export const defaultPackages = [
       }
     ],
     images: [
-      "/src/assets/pd1.jpg",
-      "/src/assets/pd2.jpg",
-      "/src/assets/pd3.jpg",
-      "/src/assets/pd4.jpg",
-      "/src/assets/pd5.jpg",
-      "/src/assets/pd6.jpg"
+      "/assets/pd1.jpg",
+      "/assets/pd2.jpg",
+      "/assets/pd3.jpg",
+      "/assets/pd4.jpg",
+      "/assets/pd5.jpg",
+      "/assets/pd6.jpg"
     ]
   }
 ];

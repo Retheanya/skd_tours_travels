@@ -3,111 +3,111 @@ const defaultHoneymoonPackages = [
     slug: "romantic-munnar-escape",
     name: "Romantic Munnar Escape",
     description: "Experience the magic of misty tea gardens and romantic weather with your loved one. A perfect peaceful retreat.",
-    imageUrl: "/src/assets/munnar1.jpg",
+    imageUrl: "/assets/munnar1.jpg",
     subtitle: "Munnar, Kerala",
     duration: "3 Days",
     price: "Rs. 9,999",
-    images: ["/src/assets/munnar1.jpg", "/src/assets/munnar2.jpg", "/src/assets/munnar3.jpg", "/src/assets/munnar4.jpg"]
+    images: ["/assets/munnar1.jpg", "/assets/munnar2.jpg", "/assets/munnar3.jpg", "/assets/munnar4.jpg"]
   },
   {
     slug: "alleppey-houseboat-honeymoon",
     name: "Alleppey Houseboat Honeymoon",
     description: "Sail through the tranquil backwaters in a premium private houseboat. Enjoy traditional Kerala cuisine and serene views.",
-    imageUrl: "/src/assets/allapey1.jpg",
+    imageUrl: "/assets/allapey1.jpg",
     subtitle: "Alleppey, Kerala",
     duration: "2 Days",
     price: "Rs. 12,500",
-    images: ["/src/assets/allapey1.jpg", "/src/assets/allapey2.jpg", "/src/assets/allapey3.jpg", "/src/assets/allapey4.jpg"]
+    images: ["/assets/allapey1.jpg", "/assets/allapey2.jpg", "/assets/allapey3.jpg", "/assets/allapey4.jpg"]
   },
   {
     slug: "coorg-natures-lap",
     name: "Coorg Nature's Lap",
     description: "Wake up to the aroma of coffee plantations and stunning valley views. Ideal for nature-loving couples.",
-    imageUrl: "/src/assets/coorg1.jpg",
+    imageUrl: "/assets/coorg1.jpg",
     subtitle: "Coorg, Karnataka",
     duration: "4 Days",
     price: "Rs. 14,999",
-    images: ["/src/assets/coorg1.jpg", "/src/assets/coorg2.jpg", "/src/assets/coorg3.jpg", "/src/assets/coorg4.jpg"]
+    images: ["/assets/coorg1.jpg", "/assets/coorg2.jpg", "/assets/coorg3.jpg", "/assets/coorg4.jpg"]
   },
   {
     slug: "ooty-queen-of-hills",
     name: "Ooty Queen of Hills",
     description: "A timeless honeymoon destination with botanical gardens, lakes, and heritage trains.",
-    imageUrl: "/src/assets/ooty1.jpg",
+    imageUrl: "/assets/ooty1.jpg",
     subtitle: "Ooty, Tamil Nadu",
     duration: "3 Days",
     price: "Rs. 11,500",
-    images: ["/src/assets/ooty1.jpg", "/src/assets/ooty2.jpg", "/src/assets/oorty3.jpg", "/src/assets/ooty4.jpg"]
+    images: ["/assets/ooty1.jpg", "/assets/ooty2.jpg", "/assets/oorty3.jpg", "/assets/ooty4.jpg"]
   },
   {
     slug: "goa-beach-vibes",
     name: "Goa Beach Vibes",
     description: "Sun, sand, sea, and sunsets. The perfect recipe for a romantic beach getaway with vibrant nightlife.",
-    imageUrl: "/src/assets/goa1.jpg",
+    imageUrl: "/assets/goa1.jpg",
     subtitle: "Goa",
     duration: "5 Days",
     price: "Rs. 18,999",
-    images: ["/src/assets/goa1.jpg", "/src/assets/goa2.jpg", "/src/assets/goa3.jpg"]
+    images: ["/assets/goa1.jpg", "/assets/goa2.jpg", "/assets/goa3.jpg"]
   },
   {
     slug: "french-riviera-of-the-east",
     name: "French Riviera of the East",
     description: "Stroll through colonial streets and pristine beaches with your partner in this quiet French town.",
-    imageUrl: "/src/assets/pondi1.jpg",
+    imageUrl: "/assets/pondi1.jpg",
     subtitle: "Pondicherry",
     duration: "3 Days",
     price: "Rs. 10,999",
-    images: ["/src/assets/pondi1.jpg", "/src/assets/pondi2.jpg", "/src/assets/pondi3.jpg", "/src/assets/pondi4.jpg"]
+    images: ["/assets/pondi1.jpg", "/assets/pondi2.jpg", "/assets/pondi3.jpg", "/assets/pondi4.jpg"]
   },
   {
     slug: "yercaud-peaceful-retreat",
     name: "Yercaud Peaceful Retreat",
     description: "A hidden gem offering serene lakes and quiet viewpoints, away from the bustling city life.",
-    imageUrl: "/src/assets/yerkad1.jpg",
+    imageUrl: "/assets/yerkad1.jpg",
     subtitle: "Yercaud, Tamil Nadu",
     duration: "2 Days",
     price: "Rs. 8,999",
-    images: ["/src/assets/yerkad1.jpg", "/src/assets/yerkad2.jpg", "/src/assets/yerkad3.jpg", "/src/assets/yerkad4.jpg"]
+    images: ["/assets/yerkad1.jpg", "/assets/yerkad2.jpg", "/assets/yerkad3.jpg", "/assets/yerkad4.jpg"]
   },
   {
     slug: "chikmagalur-coffee-bliss",
     name: "Chikmagalur Coffee Bliss",
     description: "Luxurious stays amidst lush green coffee estates and waterfalls. Perfect for a cozy retreat.",
-    imageUrl: "/src/assets/chikmangalor1.jpg",
+    imageUrl: "/assets/chikmangalor1.jpg",
     subtitle: "Chikmagalur, Karnataka",
     duration: "3 Days",
     price: "Rs. 12,999",
-    images: ["/src/assets/chikmangalor1.jpg", "/src/assets/chikmangalor2.jpg", "/src/assets/chikmangalor3.jpg", "/src/assets/chikmangalor4.jpg"]
+    images: ["/assets/chikmangalor1.jpg", "/assets/chikmangalor2.jpg", "/assets/chikmangalor3.jpg", "/assets/chikmangalor4.jpg"]
   },
   {
     slug: "wayanad-wild-romance",
     name: "Wayanad Wild Romance",
     description: "Treehouses, caves, and wildlife for the adventurous couple seeking an offbeat honeymoon.",
-    imageUrl: "/src/assets/waynad1.jpg",
+    imageUrl: "/assets/waynad1.jpg",
     subtitle: "Wayanad, Kerala",
     duration: "4 Days",
     price: "Rs. 13,500",
-    images: ["/src/assets/waynad1.jpg", "/src/assets/waynad2.jpg", "/src/assets/waynad3.jpg", "/src/assets/waynad4.jpg"]
+    images: ["/assets/waynad1.jpg", "/assets/waynad2.jpg", "/assets/waynad3.jpg", "/assets/waynad4.jpg"]
   },
   {
     slug: "kodaikanal-princess-of-hills",
     name: "Kodaikanal Princess of Hills",
     description: "Pine forests, star-shaped lake, and foggy mornings make it perfectly romantic for newlyweds.",
-    imageUrl: "/src/assets/kodaikanal1.jpg",
+    imageUrl: "/assets/kodaikanal1.jpg",
     subtitle: "Kodaikanal, Tamil Nadu",
     duration: "3 Days",
     price: "Rs. 11,999",
-    images: ["/src/assets/kodaikanal1.jpg", "/src/assets/kodaikanal2.jpg", "/src/assets/kodaikanal3.jpg", "/src/assets/kodaikanal4.jpg"]
+    images: ["/assets/kodaikanal1.jpg", "/assets/kodaikanal2.jpg", "/assets/kodaikanal3.jpg", "/assets/kodaikanal4.jpg"]
   },
   {
     slug: "mangalore-coastal-delight",
     name: "Mangalore Coastal Delight",
     description: "Enjoy pristine beaches, ancient temples, and amazing seafood on your romantic getaway to Mangalore.",
-    imageUrl: "/src/assets/mangalor1.jpg",
+    imageUrl: "/assets/mangalor1.jpg",
     subtitle: "Mangalore",
     duration: "3 Days",
     price: "Rs. 10,500",
-    images: ["/src/assets/mangalor1.jpg", "/src/assets/mangalor2.jpg", "/src/assets/mangalor3.jpg", "/src/assets/mangalor4.jpg"]
+    images: ["/assets/mangalor1.jpg", "/assets/mangalor2.jpg", "/assets/mangalor3.jpg", "/assets/mangalor4.jpg"]
   }
 ];
 
@@ -183,6 +183,8 @@ const seedDatabase = async () => {
       const existing = await Package.findOne({ slug: pkg.slug });
       if (existing) {
         existing.subtitle = pkg.subtitle;
+        existing.imageUrl = pkg.imageUrl;
+        existing.images = pkg.images;
         await existing.save();
       } else {
         await Package.create(pkg);
@@ -190,29 +192,27 @@ const seedDatabase = async () => {
     }
     console.log("Successfully synchronized default travel packages.");
 
-    // Seed Honeymoon Packages if none exist or contain old Unsplash URLs
-    const oldUnsplashExists = await Honeymoon.findOne({ imageUrl: /unsplash\.com/ });
-    if (oldUnsplashExists) {
-      await Honeymoon.deleteMany({});
-      console.log("Cleared old Unsplash honeymoon packages.");
+    // Seed and Synchronize Honeymoon Packages with updated /assets/ paths
+    for (const p of defaultHoneymoonPackages) {
+      const existing = await Honeymoon.findOne({ slug: p.slug });
+      if (existing) {
+        existing.imageUrl = p.imageUrl;
+        existing.images = p.images;
+        await existing.save();
+      } else {
+        await Honeymoon.create({
+          slug: p.slug,
+          name: p.name,
+          description: p.description,
+          imageUrl: p.imageUrl,
+          subtitle: p.subtitle,
+          price: p.price,
+          duration: p.duration,
+          images: p.images
+        });
+      }
     }
-
-    const honeymoonCount = await Honeymoon.countDocuments();
-    if (honeymoonCount === 0) {
-      // Create clean seed objects for Honeymoon collection
-      const seeds = defaultHoneymoonPackages.map(p => ({
-        slug: p.slug,
-        name: p.name,
-        description: p.description,
-        imageUrl: p.imageUrl,
-        subtitle: p.subtitle,
-        price: p.price,
-        duration: p.duration,
-        images: p.images
-      }));
-      await Honeymoon.insertMany(seeds);
-      console.log("Successfully seeded default honeymoon packages in separate collection.");
-    }
+    console.log("Successfully synchronized default honeymoon packages.");
 
     // 3. Seed Default Taxis
     const taxiCount = await Taxi.countDocuments();
