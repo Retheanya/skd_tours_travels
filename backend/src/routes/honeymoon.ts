@@ -37,7 +37,7 @@ router.get("/:slug", async (req: Request, res: Response): Promise<void> => {
 // @access  Protected Admin Only
 router.post("/", protect, async (req: Request, res: Response): Promise<void> => {
   try {
-    const { slug, name, description, imageUrl, subtitle, price, duration, images } = req.body;
+    const { slug, name, description, imageUrl, subtitle, price, duration, images, category, subCategory } = req.body;
 
     if (!slug || !name || !description || !imageUrl) {
       res.status(400).json({ message: "Please provide slug, name, description and imageUrl" });
@@ -59,6 +59,8 @@ router.post("/", protect, async (req: Request, res: Response): Promise<void> => 
       price,
       duration,
       images: images || [],
+      category: category || "Domestic",
+      subCategory: subCategory || "Honeymoon",
     });
 
     res.status(201).json(newHoneymoon);
@@ -72,7 +74,7 @@ router.post("/", protect, async (req: Request, res: Response): Promise<void> => 
 // @access  Protected Admin Only
 router.put("/:id", protect, async (req: Request, res: Response): Promise<void> => {
   try {
-    const { slug, name, description, imageUrl, subtitle, price, duration, images } = req.body;
+    const { slug, name, description, imageUrl, subtitle, price, duration, images, category, subCategory } = req.body;
 
     const honeymoon = await Honeymoon.findById(req.params.id);
     if (!honeymoon) {
@@ -96,6 +98,8 @@ router.put("/:id", protect, async (req: Request, res: Response): Promise<void> =
     honeymoon.price = price !== undefined ? price : honeymoon.price;
     honeymoon.duration = duration || honeymoon.duration;
     honeymoon.images = images !== undefined ? images : honeymoon.images;
+    (honeymoon as any).category = category !== undefined ? category : (honeymoon as any).category;
+    (honeymoon as any).subCategory = subCategory !== undefined ? subCategory : (honeymoon as any).subCategory;
 
     const updatedHoneymoon = await honeymoon.save();
     res.json(updatedHoneymoon);

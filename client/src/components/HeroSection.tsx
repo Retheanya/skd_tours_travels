@@ -178,7 +178,7 @@ const HeroSection = () => {
                   </div>
                   <div className="flex flex-col -space-y-1 scale-90 origin-left">
                       <span className="text-orange-400 text-3xl" style={{ fontFamily: "Dancing Script, cursive" }}>Satisfied</span>
-                      <span className="text-[#333] text-2xl font-black uppercase tracking-tighter">Clients</span>
+                      <span className="!text-white reveal-text-white text-2xl font-black uppercase tracking-tighter">Clients</span>
                   </div>
               </div>
 

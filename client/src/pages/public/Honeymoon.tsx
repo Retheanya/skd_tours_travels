@@ -371,7 +371,7 @@ const Honeymoon = () => {
   const [searchTerm, setSearchTerm] = useState(searchParams.get('search') || "");
   const [category, setCategory] = useState("All Category");
   const [destination, setDestination] = useState(searchParams.get('dest') || "All Destination");
-  const [subCategory, setSubCategory] = useState("Honeymoon");
+  const [subCategory, setSubCategory] = useState("All Sub Category");
   const [duration, setDuration] = useState(searchParams.get('duration') || "All Durations");
   const [previewImage, setPreviewImage] = useState<string | null>(null);
 
@@ -398,7 +398,9 @@ const Honeymoon = () => {
             image: pkg.imageUrl,
             duration: pkg.duration || "3 Days",
             description: pkg.description,
-            images: pkg.images && pkg.images.length > 0 ? pkg.images : [pkg.imageUrl]
+            images: pkg.images && pkg.images.length > 0 ? pkg.images : [pkg.imageUrl],
+            category: pkg.category || "Domestic",
+            subCategory: pkg.subCategory || "Honeymoon"
           }));
           // Prioritize original static packages with local images, and only add unique new backend packages
           const uniqueFetched = mapped.filter(
@@ -420,10 +422,12 @@ const Honeymoon = () => {
 
   useEffect(() => {
     setCurrentPage(1);
-  }, [searchTerm, destination, duration]);
+  }, [searchTerm, destination, duration, category, subCategory]);
 
-  // Unique distinct durations present in honeymoonPackages
+  // Unique distinct durations, categories and subcategories present in honeymoonPackages
   const allDurations = Array.from(new Set((dbPackages.length > 0 ? dbPackages : honeymoonPackages).map(pkg => pkg.duration))).sort();
+  const allCategories = Array.from(new Set((dbPackages.length > 0 ? dbPackages : honeymoonPackages).map(pkg => pkg.category || "Domestic"))).sort();
+  const allSubCategories = Array.from(new Set((dbPackages.length > 0 ? dbPackages : honeymoonPackages).map(pkg => pkg.subCategory || "Honeymoon"))).sort();
 
   // Filter Logic
   const filteredPackages = (dbPackages.length > 0 ? dbPackages : honeymoonPackages).filter(pkg => {
@@ -431,7 +435,12 @@ const Honeymoon = () => {
     const matchesDest = destination === "All Destination" || pkg.destination.includes(destination);
     const matchesDuration = duration === "All Durations" || pkg.duration === duration;
     
-    return matchesSearch && matchesDest && matchesDuration;
+    const pkgCategory = pkg.category || "Domestic";
+    const pkgSubCategory = pkg.subCategory || "Honeymoon";
+    const matchesCategory = category === "All Category" || pkgCategory.toLowerCase() === category.toLowerCase();
+    const matchesSubCategory = subCategory === "All Sub Category" || pkgSubCategory.toLowerCase() === subCategory.toLowerCase();
+    
+    return matchesSearch && matchesDest && matchesDuration && matchesCategory && matchesSubCategory;
   });
 
   const totalPages = Math.ceil(filteredPackages.length / itemsPerPage);
@@ -515,7 +524,9 @@ const Honeymoon = () => {
                           style={{ fontFamily: "'Jost', sans-serif" }}
                         >
                           <option>All Category</option>
-                          <option>Domestic</option>
+                          {allCategories.map((cat, idx) => (
+                             <option key={idx} value={cat}>{cat}</option>
+                          ))}
                         </select>
                      </div>
 
@@ -552,7 +563,10 @@ const Honeymoon = () => {
                           className="w-full border border-gray-200 rounded-md px-4 py-2.5 text-sm outline-none focus:border-orange-500 transition-colors bg-gray-50 appearance-none cursor-pointer"
                           style={{ fontFamily: "'Jost', sans-serif" }}
                         >
-                          <option>Honeymoon</option>
+                          <option>All Sub Category</option>
+                          {allSubCategories.map((sub, idx) => (
+                             <option key={idx} value={sub}>{sub}</option>
+                           ))}
                         </select>
                      </div>
 

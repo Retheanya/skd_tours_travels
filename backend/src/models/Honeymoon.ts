@@ -10,6 +10,8 @@ const honeymoonSchema = new Schema(
     price: { type: String },
     duration: { type: String },
     images: [{ type: String }],
+    category: { type: String, default: "Domestic" },
+    subCategory: { type: String, default: "Honeymoon" },
   },
   { timestamps: true }
 );

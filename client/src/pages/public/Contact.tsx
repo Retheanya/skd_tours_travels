@@ -77,7 +77,7 @@ const Contact = () => {
                
                {/* REACH US CARD */}
                 <a 
-                  href="https://www.google.com/maps/search/169+shri+Aandhal+residency+Mariamman+Kovil+Street+Peelamedu+Coimbatore+641004/@11.038562,76.991387,14z"
+                  href="https://www.google.com/maps/search/69+shri+Aandhal+residency+Mariamman+Kovil+Street+Peelamedu+Coimbatore+641004/@11.038562,76.991387,14z"
                   target="_blank"
                   rel="noreferrer"
                   className="bg-[#ffdfbf] rounded-full aspect-square p-6 md:p-8 flex flex-col items-center justify-center text-center border border-orange-200 shadow-[0_4px_25px_rgba(0,0,0,0.03)] hover:border-orange-500/40 hover:shadow-[0_12px_45px_rgba(249,115,22,0.15)] hover:-translate-y-1.5 transition-all duration-300 w-full max-w-[320px] mx-auto select-none no-underline"
@@ -89,7 +89,7 @@ const Contact = () => {
                       Reach Us
                    </h4>
                    <p className="text-sm font-bold text-gray-700 font-body leading-relaxed max-w-[220px]" style={{ fontFamily: "'Jost', sans-serif" }}>
-                      169, shri Aandhal residency,<br />
+                      69, shri Aandhal residency,<br />
                       Mariamman Kovil Street, Peelamadu,<br />
                       Coimbatore- 641004
                    </p>
@@ -290,7 +290,7 @@ const Contact = () => {
       <section className="relative w-full h-[450px]">
           <iframe 
             title="Google Map Location"
-            src="https://maps.google.com/maps?q=11.038562,76.991387+(169,+shri+Aandhal+residency)&t=&z=16&ie=UTF8&iwloc=&output=embed"
+            src="https://maps.google.com/maps?q=11.038562,76.991387+(69,+shri+Aandhal+residency)&t=&z=16&ie=UTF8&iwloc=&output=embed"
             className="w-full h-full border-0 grayscale hover:grayscale-0 transition-all duration-700"
             allowFullScreen
           />

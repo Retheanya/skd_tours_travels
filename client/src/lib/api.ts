@@ -33,6 +33,8 @@ export interface HoneymoonPackage {
   price?: string;
   duration?: string;
   images?: string[];
+  category?: string;
+  subCategory?: string;
   createdAt?: string;
   updatedAt?: string;
 }

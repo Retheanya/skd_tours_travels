@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { CheckCircle, MapPin, Phone, Mail } from "lucide-react";
 import serviceImg1 from "../../assets/service.png";
 import serviceImg2 from "../../assets/service2.png";
+import travelImg from "../../assets/travel.png";
 
 const serviceCategories = [
   {
@@ -33,7 +34,7 @@ const Service = () => {
       {/* 1. Hero Section */}
       <section className="relative h-[350px] flex items-center justify-center overflow-hidden bg-[#222]">
         <div className="absolute inset-0 z-0 opacity-80">
-           <img src={serviceImg2} alt="Services" className="w-full h-full object-cover" />
+           <img src={travelImg} alt="Services" className="w-full h-full object-cover" />
         </div>
         <div className="absolute inset-0 bg-orange-600/20 z-10" />
         <div className="relative z-20 text-center px-4">
@@ -146,11 +147,11 @@ const Service = () => {
           style={{ backgroundImage: `url(${serviceImg2})` }}
         />
         <div className="relative z-20 text-center text-white px-6">
-          <h1 className="text-4xl md:text-6xl font-bold mb-10 max-w-4xl mx-auto leading-tight" style={{ fontFamily: "'Cormorant Infant', serif" }}>
+          <h1 className="!text-white reveal-text-white text-4xl md:text-6xl font-bold mb-10 max-w-4xl mx-auto leading-tight" style={{ fontFamily: "'Cormorant Infant', serif" }}>
             Experience the Serenity of <br />
             <span className="text-orange-500">South Indian Coastal Paradise</span>
           </h1>
-          <p className="text-lg md:text-xl mb-12 max-w-2xl mx-auto font-body opacity-90">
+          <p className="!text-white reveal-text-white text-lg md:text-xl mb-12 max-w-2xl mx-auto font-body opacity-90">
             From the backwaters of Kerala to the shores of Gokarna, discover the finest coastal getaways with our expert guidance.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
@@ -190,25 +191,34 @@ const Service = () => {
             <div className="w-full lg:w-1/3 bg-[#222] p-12 text-white">
               <h4 className="text-3xl font-bold mb-8" style={{ fontFamily: "'Cormorant Infant', serif" }}>Contact Info</h4>
               <div className="space-y-8">
-                <div className="flex items-start gap-4">
+                 <div className="flex items-start gap-4">
                   <MapPin className="w-6 h-6 text-orange-500" />
                   <div>
                     <p className="font-bold text-sm uppercase text-gray-400 mb-1">Our Office</p>
-                    <p className="text-sm opacity-80">123 Travel Lane, Coimbatore,<br/>Tamil Nadu, India</p>
+                    <p className="text-sm opacity-80">
+                      69, shri Aandhal residency,<br/>
+                      Mariamman Kovil Street, Peelamadu,<br/>
+                      Coimbatore - 641004
+                    </p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
                   <Phone className="w-6 h-6 text-orange-500" />
                   <div>
                     <p className="font-bold text-sm uppercase text-gray-400 mb-1">Phone</p>
-                    <p className="text-sm opacity-80">+91 98430 51148</p>
+                    <p className="text-sm opacity-80">
+                      +91 98945 55553<br/>
+                      +91 94425 55553<br/>
+                      +91 98947 70505<br/>
+                      +91 98430 51148
+                    </p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
                   <Mail className="w-6 h-6 text-orange-500" />
                   <div>
                     <p className="font-bold text-sm uppercase text-gray-400 mb-1">Email</p>
-                    <p className="text-sm opacity-80">info@skttours.com</p>
+                    <p className="text-sm opacity-80">skttravels22@gmail.com</p>
                   </div>
                 </div>
               </div>

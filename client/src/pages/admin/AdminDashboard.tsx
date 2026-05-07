@@ -95,6 +95,8 @@ const AdminDashboard = () => {
     price: "",
     duration: "",
     images: [] as string[],
+    category: "",
+    subCategory: "",
   });
 
   const handleOpenHoneymoonCreateForm = () => {
@@ -107,6 +109,8 @@ const AdminDashboard = () => {
       price: "",
       duration: "",
       images: [],
+      category: "Domestic",
+      subCategory: "Honeymoon",
     });
     setSelectedHoneymoon(null);
     setIsHoneymoonEditing(false);
@@ -124,6 +128,8 @@ const AdminDashboard = () => {
       price: pkg.price || "",
       duration: pkg.duration || "",
       images: pkg.images || [],
+      category: pkg.category || "Domestic",
+      subCategory: pkg.subCategory || "Honeymoon",
     });
     setIsHoneymoonEditing(true);
     setIsHoneymoonFormOpen(true);
@@ -1613,6 +1619,31 @@ const AdminDashboard = () => {
                       }
                     }}
                     className="w-full text-xs text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-xl file:border-0 file:text-xs file:font-semibold file:bg-orange-50 file:text-[#F97316] hover:file:bg-orange-100 cursor-pointer"
+                  />
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-sm font-bold text-slate-700 mb-1.5">Filter Category (e.g. Domestic, International)</label>
+                  <input 
+                    type="text" 
+                    required
+                    value={honeymoonForm.category}
+                    onChange={(e) => setHoneymoonForm({ ...honeymoonForm, category: e.target.value })}
+                    placeholder="e.g. Domestic"
+                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#F97316] focus:outline-none text-sm transition-colors"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-bold text-slate-700 mb-1.5">Sub Category (e.g. Honeymoon, Hill Station)</label>
+                  <input 
+                    type="text" 
+                    required
+                    value={honeymoonForm.subCategory}
+                    onChange={(e) => setHoneymoonForm({ ...honeymoonForm, subCategory: e.target.value })}
+                    placeholder="e.g. Honeymoon"
+                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#F97316] focus:outline-none text-sm transition-colors"
                   />
                 </div>
               </div>

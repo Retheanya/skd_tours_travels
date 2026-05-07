@@ -27,9 +27,9 @@ const AdventureSection = () => {
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 
-                {/* Always-visible Premium Text Overlay */}
-                <div className="absolute inset-0 bg-black/15 flex items-center justify-center transition-colors duration-300 group-hover:bg-black/35">
-                  <h3 className="text-white text-3xl font-black font-display tracking-wider drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)] group-hover:scale-105 transition-transform duration-500">
+                {/* Sliding Overlay from Bottom on Hover */}
+                <div className="absolute inset-0 bg-black/50 flex items-center justify-center transform translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out">
+                  <h3 className="!text-white reveal-text-white text-3xl font-black font-display tracking-wider drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)] transform scale-95 group-hover:scale-100 transition-transform duration-500 delay-100">
                     {card.name}
                   </h3>
                 </div>

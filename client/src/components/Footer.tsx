@@ -194,7 +194,6 @@ const Footer = () => {
                   { label: "About Us", to: "/about" },
                   { label: "All Packages", to: "/packages" },
                   { label: "Honeymoon", to: "/honeymoon" },
-                  { label: "Testimonials", to: "/testimonials" },
                   { label: "Contact", to: "/contact" },
                 ].map((item) => (
                   <li key={item.label}>
@@ -214,7 +213,7 @@ const Footer = () => {
               <span style={headingStyle}>Contact Us</span>
               <div style={{ display: "flex", flexDirection: "column", gap: "12px", ...bodyStyle }}>
                 <a 
-                  href="https://www.google.com/maps/search/169+shri+Aandhal+residency+Mariamman+Kovil+Street+Peelamedu+Coimbatore+641004/@11.038562,76.991387,14z"
+                  href="https://www.google.com/maps/search/69+shri+Aandhal+residency+Mariamman+Kovil+Street+Peelamedu+Coimbatore+641004/@11.038562,76.991387,14z"
                   target="_blank"
                   rel="noreferrer"
                   className="flex items-start gap-3 hover:opacity-80 transition-opacity"
@@ -222,7 +221,7 @@ const Footer = () => {
                 >
                   <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5" style={{ color: "#f97316" }} />
                   <p style={{ ...bodyStyle, margin: 0, textAlign: "left" }}>
-                    169, shri Aandhal residency,<br />
+                    69, shri Aandhal residency,<br />
                     Mariamman Kovil Street, Peelamadu,<br />
                     Coimbatore- 641004
                   </p>
