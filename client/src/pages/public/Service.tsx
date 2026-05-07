@@ -191,17 +191,23 @@ const Service = () => {
             <div className="w-full lg:w-1/3 bg-[#222] p-12 text-white">
               <h4 className="text-3xl font-bold mb-8" style={{ fontFamily: "'Cormorant Infant', serif" }}>Contact Info</h4>
               <div className="space-y-8">
-                 <div className="flex items-start gap-4">
-                  <MapPin className="w-6 h-6 text-orange-500" />
+                 <a 
+                   href="https://www.google.com/maps/search/69,+Shri+Aandhal+Residency,+Mariamman+Kovil+Street,+Peelamedu,+Coimbatore+-+641004,+Tamil+Nadu,+India/@11.046397,77.01146,16z"
+                   target="_blank"
+                   rel="noreferrer"
+                   className="flex items-start gap-4 hover:opacity-80 transition-opacity"
+                 >
+                  <MapPin className="w-6 h-6 text-orange-500 flex-shrink-0 mt-1" />
                   <div>
                     <p className="font-bold text-sm uppercase text-gray-400 mb-1">Our Office</p>
                     <p className="text-sm opacity-80">
-                      69, shri Aandhal residency,<br/>
-                      Mariamman Kovil Street, Peelamadu,<br/>
-                      Coimbatore - 641004
+                      69, Shri Aandhal Residency,<br/>
+                      Mariamman Kovil Street,<br/>
+                      Peelamedu, Coimbatore – 641004,<br/>
+                      Tamil Nadu, India.
                     </p>
                   </div>
-                </div>
+                </a>
                 <div className="flex items-start gap-4">
                   <Phone className="w-6 h-6 text-orange-500" />
                   <div>

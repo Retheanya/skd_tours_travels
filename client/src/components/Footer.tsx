@@ -214,7 +214,7 @@ const Footer = () => {
               <span style={headingStyle}>Contact Us</span>
               <div style={{ display: "flex", flexDirection: "column", gap: "12px", ...bodyStyle }}>
                 <a 
-                  href="https://www.google.com/maps/search/69+shri+Aandhal+residency+Mariamman+Kovil+Street+Peelamedu+Coimbatore+641004/@11.038562,76.991387,14z"
+                  href="https://www.google.com/maps/search/69,+Shri+Aandhal+Residency,+Mariamman+Kovil+Street,+Peelamedu,+Coimbatore+-+641004,+Tamil+Nadu,+India/@11.046397,77.01146,16z"
                   target="_blank"
                   rel="noreferrer"
                   className="flex items-start gap-3 hover:opacity-80 transition-opacity"
@@ -222,9 +222,10 @@ const Footer = () => {
                 >
                   <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5" style={{ color: "#f97316" }} />
                   <p style={{ ...bodyStyle, margin: 0, textAlign: "left" }}>
-                    69, shri Aandhal residency,<br />
-                    Mariamman Kovil Street, Peelamadu,<br />
-                    Coimbatore- 641004
+                    69, Shri Aandhal Residency,<br />
+                    Mariamman Kovil Street,<br />
+                    Peelamedu, Coimbatore – 641004,<br />
+                    Tamil Nadu, India.
                   </p>
                 </a>
                 <div className="flex items-start gap-3">
