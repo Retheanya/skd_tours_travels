@@ -57,15 +57,15 @@ const Header = () => {
   const textColor = "text-[#333]";
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-[999] transition-all duration-300 bg-white shadow-md h-[86.2px] flex items-center`}>
-      <div className="container mx-auto px-6 flex items-center justify-between h-full">
+    <header className={`fixed top-0 left-0 right-0 z-[999] transition-all duration-300 bg-white shadow-md h-[86.2px] flex items-center w-full overflow-x-hidden`}>
+      <div className="container mx-auto px-3 xs:px-4 sm:px-6 flex items-center justify-between h-full w-full">
         
         {/* BRANDING */}
         <Link to="/" className="flex items-center gap-2 group">
            <div className="relative">
               <div className="flex items-center">
-                 <span className="text-3xl font-black italic text-[#0066cc]">SKT</span>
-                 <span className="text-3xl font-black italic text-[#ff9900] ml-1">Tours</span>
+                 <span className="text-2xl sm:text-3xl font-black italic text-[#0066cc]">SKT</span>
+                 <span className="text-2xl sm:text-3xl font-black italic text-[#ff9900] ml-1">Tours</span>
               </div>
               <div className="flex items-center gap-1 -mt-1">
                  <span className="text-[10px] font-black tracking-[0.3em] uppercase text-[#333]">and travels</span>
@@ -94,19 +94,19 @@ const Header = () => {
         </nav>
 
         {/* CONTACT CTA */}
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-2 sm:gap-4 shrink-0">
           <div className="relative">
               <button onClick={() => setIsPlanOpen(true)} className="relative z-10 flex items-center justify-center hover:scale-105 transition-transform">
                   <img 
                     src={planBtn} 
                     alt="Plan" 
-                    className="w-[145px] md:w-[175px] h-[50px] md:h-[60px] object-contain cursor-pointer" 
+                    className="w-[110px] sm:w-[145px] md:w-[175px] h-[45px] sm:h-[50px] md:h-[60px] object-contain cursor-pointer" 
                   />
               </button>
           </div>
           
-          <button onClick={() => setMobileOpen(!mobileOpen)} className={`xl:hidden ${textColor}`}>
-            {mobileOpen ? <X className="w-8 h-8" /> : <Menu className="w-8 h-8" />}
+          <button onClick={() => setMobileOpen(!mobileOpen)} className={`xl:hidden flex-shrink-0 ${textColor}`}>
+            {mobileOpen ? <X className="w-6 h-6 sm:w-8 h-8" /> : <Menu className="w-6 h-6 sm:w-8 h-8" />}
           </button>
         </div>
       </div>

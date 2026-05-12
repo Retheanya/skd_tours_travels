@@ -28,9 +28,9 @@ const Layout = ({ children }: LayoutProps) => {
   };
 
   return (
-    <div className="min-h-screen relative">
+    <div className="min-h-screen relative w-full overflow-x-hidden">
       <Header />
-      <main className="pt-[86.2px]">
+      <main className="pt-[86.2px] w-full overflow-x-hidden">
         {children}
       </main>
       
