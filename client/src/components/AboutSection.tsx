@@ -32,10 +32,10 @@ const AboutSection = () => {
             <h2 className="mb-2">Why Choose Us</h2>
             <h3 className="mb-6">
               Stress-free Holidays with<br/>
-              <span className="text-[#f97316]">SKT tours and travels</span>
+              <span className="text-[#f97316]">SKD Tours and Travels</span>
             </h3>
             <p className="mb-8 leading-relaxed">
-              SKT tours and travels is one of the leading travel agencies in South India.
+              SKD Tours and Travels is one of the leading travel agencies in South India.
               We make sure your next trip is truly special. Our friendly and experienced team
               plans everything based on your needs, so you can enjoy a holiday filled with great memories.
             </p>

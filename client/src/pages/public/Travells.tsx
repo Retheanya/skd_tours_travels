@@ -215,7 +215,7 @@ const Travells = () => {
                 Best Coimbatore <span className="text-[#f97316]">Taxi Services</span> for All Your Needs
               </h3>
               <p className="leading-relaxed mb-6">
-                SKT Tours and Travels offers top-notch taxi services in Coimbatore and beyond. Whether you're planning a trip to the hills of Ooty, the serenity of Kodaikanal, or just need a ride to the airport, we have the perfect vehicle for you.
+                SKD Tours and Travels offers top-notch taxi services in Coimbatore and beyond. Whether you're planning a trip to the hills of Ooty, the serenity of Kodaikanal, or just need a ride to the airport, we have the perfect vehicle for you.
               </p>
               <p className="leading-relaxed mb-8">
                 Our fleet is well-maintained, our drivers are professional and experienced, and our pricing is transparent with no hidden costs. Experience the joy of hassle-free travel with our doorstep pickup and drop services.

@@ -34,10 +34,10 @@ const GallerySection = () => {
         <div className="text-center mb-16 space-y-4">
           <h2 className="title-cursive">Explore Memories in Our Gallery</h2>
           <h3 className="text-4xl md:text-5xl font-bold text-[#1f2937]">
-            Happy Holidays With SKT!
+            Happy Holidays With SKD!
           </h3>
           <p className="max-w-3xl mx-auto text-gray-500 text-lg leading-relaxed">
-            <strong className="text-gray-700">SKT tours and travells</strong> provides <strong className="text-gray-700">international</strong>, <strong className="text-gray-700">domestic</strong>, and <strong className="text-gray-700">honeymoon</strong> tour packages. Explore the world, enjoy romantic trips, and discover hidden gems across India. We make every journey unforgettable!
+            <strong className="text-gray-700">SKD Tours and Travels</strong> provides <strong className="text-gray-700">international</strong>, <strong className="text-gray-700">domestic</strong>, and <strong className="text-gray-700">honeymoon</strong> tour packages. Explore the world, enjoy romantic trips, and discover hidden gems across India. We make every journey unforgettable!
           </p>
         </div>
 

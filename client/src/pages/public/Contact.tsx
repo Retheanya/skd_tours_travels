@@ -282,7 +282,7 @@ const Contact = () => {
                When selecting a <strong className="font-bold text-[#212529]">tour agency</strong>, it's crucial to prioritize quality over quantity. The most important factor is the level of service provided by the agency, rather than the sheer number of options they offer. <strong className="font-bold text-[#212529]">Quality should always be the top priority</strong> when choosing the right travel agency. 
             </p>
             <p className="text-gray-600 mb-6 leading-relaxed">
-               Read our reviews, talk to our guest relationships team, focus on the details, and you'll know all that you must know about the company. Established in 2006, it's been a significant period since <strong className="font-bold text-[#212529]">SKT Tours and Travells</strong> has been serving people to make their special time extra special. But it's more than that. We genuinely care about you! Our commitment to exceptional service is evident in our offerings, which is why people always come back for more.
+               Read our reviews, talk to our guest relationships team, focus on the details, and you'll know all that you must know about the company. Established in 2006, it's been a significant period since <strong className="font-bold text-[#212529]">SKD Tours and Travels</strong> has been serving people to make their special time extra special. But it's more than that. We genuinely care about you! Our commitment to exceptional service is evident in our offerings, which is why people always come back for more.
             </p>
          </div>
       </section>
@@ -291,7 +291,7 @@ const Contact = () => {
       <section className="relative w-full h-[450px]">
           <iframe 
             title="Google Map Location"
-            src="https://maps.google.com/maps?q=11.046397,77.01146+(SKT+Tours+and+Travels,+69,+Shri+Aandhal+Residency,+Mariamman+Kovil+Street,+Peelamedu,+Coimbatore+–+641004,+Tamil+Nadu,+India)&t=&z=16&ie=UTF8&iwloc=&output=embed"
+            src="https://maps.google.com/maps?q=11.046397,77.01146+(SKD+Tours+and+Travels,+69,+Shri+Aandhal+Residency,+Mariamman+Kovil+Street,+Peelamedu,+Coimbatore+–+641004,+Tamil+Nadu,+India)&t=&z=16&ie=UTF8&iwloc=&output=embed"
             className="w-full h-full border-0 grayscale hover:grayscale-0 transition-all duration-700"
             allowFullScreen
           />

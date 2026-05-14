@@ -36,7 +36,7 @@ const About = () => {
       <div className="py-16 bg-white">
         <div className="container mx-auto px-4 mb-12 text-center select-none max-w-4xl">
           <h1 className="text-4xl md:text-5xl font-bold text-[#212529] mb-4" style={{ fontFamily: "'Cormorant Infant', serif" }}>
-            About <span className="text-orange-500">SKT tours and travels</span>
+            About <span className="text-orange-500">SKD Tours and Travels</span>
           </h1>
           <p className="text-gray-600 max-w-2xl mx-auto font-body text-base sm:text-lg leading-relaxed" style={{ fontFamily: "'Jost', sans-serif" }}>
             Your premier travel partner in South India. Learn about our journey and why thousands trust us with their vacations.

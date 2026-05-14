@@ -14,8 +14,8 @@ const serviceCategories = [
   },
   {
     icon: "https://aspireholidays.in/assets/img/icon/service-4.png",
-    title: "Travel Insurance",
-    desc: "Your Safety Net in Every Adventure! Travel with Confidence, Knowing We've Got Your Back - Because peace of mind is the ultimate travel essential."
+    title: "Travel",
+    desc: "Your Perfect Journey, Tailored for You! Explore in comfort with our premium transportation options and expert local guidance - We guarantee a safe, smooth, and memorable travel experience."
   },
   {
     icon: "https://aspireholidays.in/assets/img/icon/service-5.png",
@@ -77,7 +77,7 @@ const Service = () => {
                 <span className="text-orange-500">Service Solutions</span>
               </h3>
               <p className="text-base md:text-lg text-gray-600 mb-8 leading-relaxed font-body">
-                SKT Tours and Travels is exclusively dedicated to showcasing the unparalleled beauty of South India. From the mist-covered tea gardens of Munnar to the architectural marvels of Hampi, we provide specialized travel services that ensure you experience the true essence of the South.
+                SKD Tours and Travels is exclusively dedicated to showcasing the unparalleled beauty of South India. From the mist-covered tea gardens of Munnar to the architectural marvels of Hampi, we provide specialized travel services that ensure you experience the true essence of the South.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
                 {['Local Expertise', 'Custom South India Tours', 'Temple Pilgrimage Specialists', '24/7 Ground Support'].map((item, idx) => (
@@ -168,16 +168,20 @@ const Service = () => {
       {/* 5. Stats & Partners (Inspired by Aspire) */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-24">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-y-12 gap-x-2 sm:gap-8 mb-24">
             {[
               { label: "Happy Clients", value: "5000+" },
               { label: "Destinations", value: "200+" },
               { label: "Tours Done", value: "1500+" },
               { label: "Experience", value: "10 Yrs" }
             ].map((stat, idx) => (
-              <div key={idx} className="text-center">
-                <p className="text-5xl font-black text-[#222] mb-2">{stat.value}</p>
-                <p className="text-sm font-bold text-orange-500 uppercase tracking-widest">{stat.label}</p>
+              <div key={idx} className="text-center px-1">
+                <p className="text-3xl sm:text-4xl md:text-5xl font-black text-[#222] mb-2 whitespace-nowrap leading-tight">
+                  {stat.value}
+                </p>
+                <p className="text-[11px] sm:text-xs md:text-sm font-bold text-orange-500 uppercase tracking-widest px-0.5 leading-relaxed">
+                  {stat.label}
+                </p>
               </div>
             ))}
           </div>

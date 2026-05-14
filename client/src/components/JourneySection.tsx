@@ -1,6 +1,6 @@
 import { Phone, Plane } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import sktImg from "../assets/skt.png";
+import skdImg from "../assets/skd.png";
 
 const JourneySection = () => {
   const navigate = useNavigate();
@@ -12,8 +12,8 @@ const JourneySection = () => {
         <div className="relative flex justify-center items-center">
           <div className="w-full max-w-[600px] relative z-0">
              <img 
-               src={sktImg} 
-               alt="SKT tours and travels" 
+               src={skdImg} 
+               alt="SKD Tours and Travels" 
                className="w-full h-auto object-contain" 
              />
           </div>
@@ -23,11 +23,11 @@ const JourneySection = () => {
         <div className="space-y-6 relative px-4 lg:px-8">
           <div className="space-y-3">
             <h2>Your Journey Starts Here!</h2>
-            <h3>Stressfree Holidays with SKT tours and travels</h3>
+            <h3>Stressfree Holidays with SKD Tours and Travels</h3>
           </div>
 
           <p className="max-w-lg mb-8">
-            <strong className="text-[#333]">SKT tours and travels</strong> is one of the <strong className="text-[#333]">best travel agency in South India</strong>. We make your next trip is truly special. Our friendly and experienced team plans everything based on your needs, so you can enjoy a holiday with great memories.
+            <strong className="text-[#333]">SKD Tours and Travels</strong> is one of the <strong className="text-[#333]">best travel agency in South India</strong>. We make your next trip is truly special. Our friendly and experienced team plans everything based on your needs, so you can enjoy a holiday with great memories.
           </p>
 
           <div className="flex flex-wrap gap-8 md:gap-16 py-8 border-t border-gray-100 border-b">

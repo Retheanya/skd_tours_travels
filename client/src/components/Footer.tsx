@@ -160,7 +160,7 @@ const Footer = () => {
             {/* Brand */}
             <div>
               <div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "20px", fontWeight: 700, color: "#F0870D", marginBottom: "16px" }}>
-                SKT tours and travels
+                SKD Tours and Travels
               </div>
               <p style={bodyStyle}>
                 Your trusted travel partner for exploring the incredible beauty of South India.
@@ -261,7 +261,7 @@ const Footer = () => {
           {/* Bottom Bar */}
           <div style={{ borderTop: "1px solid rgba(255,255,255,0.08)", marginTop: "48px", paddingTop: "24px", textAlign: "center", display: "flex", flexDirection: "column", gap: "8px" }}>
             <p style={{ ...bodyStyle, color: "#ffffff" }}>
-              © 2006-2026 SKT tours and travels. All rights reserved.
+              © 2006-2026 SKD Tours and Travels. All rights reserved.
             </p>
             <p style={{ ...bodyStyle, color: "#ffffff", display: "flex", alignItems: "center", justifyContent: "center", gap: "5px" }}>
               Made with <span style={{ color: "#ef4444" }}>♥</span> by{" "}

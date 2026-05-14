@@ -465,7 +465,7 @@ const AdminDashboard = () => {
       className="admin-page-container min-h-screen bg-gray-50 flex flex-col md:flex-row relative text-gray-800"
     >
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Cormorant+Infant:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
         .admin-page-container, .admin-page-container * {
           font-family: 'Inter', sans-serif !important;
           color: #000000 !important;
@@ -483,6 +483,23 @@ const AdminDashboard = () => {
         .admin-page-container .bg-\[\#F97316\],
         .admin-page-container .bg-\[\#F97316\] * {
           color: #ffffff !important;
+        }
+        /* Logo Typography & Color Overrides */
+        .admin-page-container .brand-font,
+        .admin-page-container .brand-font * {
+          font-family: 'Cormorant Infant', serif !important;
+        }
+        .admin-page-container .logo-blue,
+        .admin-page-container .logo-blue * {
+          color: #0066cc !important;
+        }
+        .admin-page-container .logo-orange,
+        .admin-page-container .logo-orange * {
+          color: #ff9900 !important;
+        }
+        .admin-page-container .logo-grey,
+        .admin-page-container .logo-grey * {
+          color: #555555 !important;
         }
         /* Slugs in light grey */
         .admin-page-container .admin-slug-text,
@@ -520,28 +537,29 @@ const AdminDashboard = () => {
       {/* 1. DESKTOP SIDEBAR - Clean White with Grey Borders */}
       <aside className={`hidden ${isDesktopSidebarOpen ? 'md:flex' : 'md:hidden'} flex-col w-64 bg-white border-r border-gray-200/80 p-6 justify-between h-screen sticky top-0 z-30 shadow-sm transition-all duration-300`}>
         <div>
-          {/* Logo Brand Header matching the image with interactive trolley */}
-          <div className="flex flex-col mb-10 border-b border-gray-100 pb-6 select-none">
+          <div className="flex flex-col mb-10 border-b border-gray-100 pb-6 select-none brand-font">
             <div className="flex items-center justify-between w-full">
-              <div className="flex items-center gap-1.5">
-                <span className="font-extrabold text-2xl italic tracking-tight" style={{ color: "#0066cc" }}>SKT</span>
-                <span className="font-extrabold text-2xl italic tracking-tight" style={{ color: "#F97316" }}>Tours</span>
+              <div className="relative flex flex-col">
+                <div className="flex items-center">
+                  <span className="text-[28px] font-black italic logo-blue leading-none">SKD</span>
+                  <span className="text-[28px] font-black italic logo-orange leading-none ml-1">Tours</span>
+                </div>
+                <div className="flex items-center gap-1 mt-0.5">
+                  <span className="text-[9px] font-black tracking-[0.3em] uppercase logo-grey leading-none">and travels</span>
+                  <div className="flex gap-0.5 ml-1">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#60a5fa]"></span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#fb923c]"></span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#4ade80]"></span>
+                  </div>
+                </div>
               </div>
               <button 
                 onClick={() => setIsDesktopSidebarOpen(false)}
-                className="p-1.5 rounded-xl bg-orange-50 hover:bg-orange-100 text-[#F97316] border border-orange-100 transition-all flex items-center justify-center shadow-sm cursor-pointer hover:scale-105 active:scale-95 shrink-0"
+                className="p-1.5 rounded-xl bg-orange-50 hover:bg-orange-100 text-[#F97316] border border-orange-100 transition-all flex items-center justify-center shadow-sm cursor-pointer hover:scale-105 active:scale-95 shrink-0 self-start"
                 title="Collapse Sidebar"
               >
                 <Luggage className="w-4 h-4" />
               </button>
-            </div>
-            <div className="flex items-center justify-between mt-2 w-full">
-              <span className="text-[10px] font-bold tracking-[0.2em] text-black">AND TRAVELS</span>
-              <div className="flex gap-1 shrink-0 pl-1">
-                <div className="w-2 h-2 rounded-full bg-[#0066cc]" />
-                <div className="w-2 h-2 rounded-full bg-[#F97316]" />
-                <div className="w-2 h-2 rounded-full bg-[#22c55e]" />
-              </div>
             </div>
           </div>
 
@@ -579,13 +597,20 @@ const AdminDashboard = () => {
       </aside>
 
       {/* 2. MOBILE HEADER & SIDEBAR */}
-      <header className="md:hidden bg-white text-slate-800 border-b border-gray-100 p-4 flex items-center justify-between sticky top-0 z-30 shadow-sm">
+      <header className="md:hidden bg-white text-slate-800 border-b border-gray-100 p-4 flex items-center justify-between sticky top-0 z-30 shadow-sm brand-font">
           <div className="flex flex-col select-none">
-            <div className="flex items-center gap-1">
-              <span className="font-extrabold text-lg italic tracking-tight" style={{ color: "#0066cc" }}>SKT</span>
-              <span className="font-extrabold text-lg italic tracking-tight" style={{ color: "#F97316" }}>Tours</span>
+            <div className="flex items-center">
+              <span className="text-[22px] font-black italic logo-blue leading-none">SKD</span>
+              <span className="text-[22px] font-black italic logo-orange leading-none ml-1">Tours</span>
             </div>
-            <span className="text-[8px] font-bold tracking-widest text-black uppercase -mt-0.5">AND TRAVELS</span>
+            <div className="flex items-center gap-0.5 mt-0.5">
+              <span className="text-[8px] font-black tracking-[0.2em] uppercase logo-grey leading-none">and travels</span>
+              <div className="flex gap-0.5 ml-0.5">
+                <span className="w-1 h-1 rounded-full bg-[#60a5fa]"></span>
+                <span className="w-1 h-1 rounded-full bg-[#fb923c]"></span>
+                <span className="w-1 h-1 rounded-full bg-[#4ade80]"></span>
+              </div>
+            </div>
           </div>
         {!isMobileSidebarOpen && (
           <button 
@@ -613,17 +638,17 @@ const AdminDashboard = () => {
             </button>
 
             <div>
-              <div className="flex flex-col mb-8 border-b border-gray-100 pb-6 select-none">
-                <div className="flex items-center gap-1.5">
-                  <span className="font-extrabold text-2xl italic tracking-tight" style={{ color: "#0066cc" }}>SKT</span>
-                  <span className="font-extrabold text-2xl italic tracking-tight" style={{ color: "#F97316" }}>Tours</span>
+              <div className="flex flex-col mb-8 border-b border-gray-100 pb-6 select-none brand-font">
+                <div className="flex items-center">
+                  <span className="text-[28px] font-black italic logo-blue leading-none">SKD</span>
+                  <span className="text-[28px] font-black italic logo-orange leading-none ml-1">Tours</span>
                 </div>
-                <div className="flex items-center justify-between mt-1 w-full">
-                  <span className="text-[10px] font-bold tracking-[0.2em] text-black">AND TRAVELS</span>
-                  <div className="flex gap-1 shrink-0 pl-1">
-                    <div className="w-2 h-2 rounded-full bg-[#0066cc]" />
-                    <div className="w-2 h-2 rounded-full bg-[#F97316]" />
-                    <div className="w-2 h-2 rounded-full bg-[#22c55e]" />
+                <div className="flex items-center gap-1 mt-0.5">
+                  <span className="text-[9px] font-black tracking-[0.3em] uppercase logo-grey leading-none">and travels</span>
+                  <div className="flex gap-0.5 ml-1">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#60a5fa]"></span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#fb923c]"></span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#4ade80]"></span>
                   </div>
                 </div>
               </div>
@@ -1403,7 +1428,7 @@ const AdminDashboard = () => {
               {isTaxiEditing ? "Edit Taxi Vehicle" : "Add Taxi Vehicle"}
             </h3>
             <p className="text-gray-400 text-xs mb-6 font-semibold uppercase tracking-wider">
-              Manage SKT fleet details and pricing
+              Manage SKD fleet details and pricing
             </p>
 
             <form onSubmit={handleSaveTaxi} className="space-y-5 select-text">

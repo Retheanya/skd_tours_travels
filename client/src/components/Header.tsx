@@ -64,7 +64,7 @@ const Header = () => {
         <Link to="/" className="flex items-center gap-2 group">
            <div className="relative">
               <div className="flex items-center">
-                 <span className="text-2xl sm:text-3xl font-black italic text-[#0066cc]">SKT</span>
+                 <span className="text-2xl sm:text-3xl font-black italic text-[#0066cc]">SKD</span>
                  <span className="text-2xl sm:text-3xl font-black italic text-[#ff9900] ml-1">Tours</span>
               </div>
               <div className="flex items-center gap-1 -mt-1">

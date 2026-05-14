@@ -16,7 +16,7 @@ const NextAdventureSection = () => {
           </div>
 
           <p className="max-w-xl text-lg text-gray-600 leading-relaxed">
-            Enjoy trekking, camping & outdoor activities with <strong className="text-[#333]">customized travel packages</strong> from <strong className="text-[#333]">SKT tours and travells</strong>. Explore new destinations, relax & create unforgettable memories on every trip you take with family and friends.
+            Enjoy trekking, camping & outdoor activities with <strong className="text-[#333]">customized travel packages</strong> from <strong className="text-[#333]">SKD Tours and Travels</strong>. Explore new destinations, relax & create unforgettable memories on every trip you take with family and friends.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 pt-4">

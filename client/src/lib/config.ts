@@ -1,1 +1,1 @@
-export const ADMIN_PATH = import.meta.env.VITE_ADMIN_PATH || "skt-owner-access";
+export const ADMIN_PATH = import.meta.env.VITE_ADMIN_PATH || "skd-owner-access";

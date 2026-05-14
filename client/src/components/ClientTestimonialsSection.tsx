@@ -9,19 +9,19 @@ import rightArrow from "../assets/right arrow.png";
 const testimonials = [
   {
     text: "Had a wonderful trip across Kerala and Tamil Nadu—everything was well planned and super comfortable. Truly a memorable experience!",
-    name: "Maha",
+    name: "Subha",
     image: t1Img,
     title: "Amazing Experience"
   },
   {
     text: "Very smooth travel arrangements and friendly service throughout our South India tour. Felt safe, relaxed, and happy the entire journey.",
-    name: "Sarah",
+    name: "Mano",
     image: t2Img,
     title: "Very smooth"
   },
   {
     text: "From beautiful hill stations to temples, the whole trip was perfectly organized. Great support and hospitality—highly recommended!",
-    name: "John",
+    name: "Ranjith",
     image: t3Img,
     title: "Highly recommended!"
   }
