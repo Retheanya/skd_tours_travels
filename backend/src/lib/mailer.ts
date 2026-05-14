@@ -21,7 +21,7 @@ export const sendInquiryEmail = async (details: {
       }
     });
 
-    const subject = `[SKT TOURS] New ${details.type === "car_booking" ? "Taxi Booking" : "General Inquiry"} - ${details.name}`;
+    const subject = `[SKD TOURS] New ${details.type === "car_booking" ? "Taxi Booking" : "General Inquiry"} - ${details.name}`;
     
     const html = `
       <div style="font-family: Arial, sans-serif; padding: 20px; border: 1px solid #F97316; border-radius: 10px; max-width: 600px;">
@@ -70,7 +70,7 @@ export const sendInquiryEmail = async (details: {
     `;
 
     await transporter.sendMail({
-      from: `"SKT Tours Enquiries" <${process.env.EMAIL_USER || "skttravels22@gmail.com"}>`,
+      from: `"SKD Tours Enquiries" <${process.env.EMAIL_USER || "skttravels22@gmail.com"}>`,
       to: "skttravels22@gmail.com",
       subject,
       html,
