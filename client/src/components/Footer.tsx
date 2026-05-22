@@ -195,6 +195,7 @@ const Footer = () => {
                   { label: "All Packages", to: "/packages" },
                   { label: "Honeymoon", to: "/honeymoon" },
                   { label: "Travels", to: "/travels" },
+                  { label: "Service", to: "/service" },
                   { label: "Contact", to: "/contact" },
                 ].map((item) => (
                   <li key={item.label}>
