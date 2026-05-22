@@ -63,6 +63,7 @@ const AdminDashboard = () => {
     seater: "",
     description: "",
     price: "",
+    pricePerDay: "",
     imageUrl: "",
     featuresString: "",
     isPopular: false,
@@ -232,6 +233,7 @@ const AdminDashboard = () => {
       seater: "",
       description: "",
       price: "",
+      pricePerDay: "",
       imageUrl: "",
       featuresString: "",
       isPopular: false,
@@ -248,6 +250,7 @@ const AdminDashboard = () => {
       seater: taxi.seater,
       description: taxi.description,
       price: taxi.price,
+      pricePerDay: taxi.pricePerDay || "",
       imageUrl: taxi.imageUrl,
       featuresString: (taxi.features || []).join(", "),
       isPopular: !!taxi.isPopular,
@@ -269,6 +272,7 @@ const AdminDashboard = () => {
         seater: taxiForm.seater,
         description: taxiForm.description,
         price: taxiForm.price,
+        pricePerDay: taxiForm.pricePerDay,
         imageUrl: taxiForm.imageUrl,
         features: parsedFeatures,
         isPopular: taxiForm.isPopular,
@@ -1019,9 +1023,18 @@ const AdminDashboard = () => {
                   <h4 className="font-extrabold text-xl text-slate-800 mb-1 leading-tight">
                     {car.name}
                   </h4>
-                  <div className="flex items-center justify-between mb-3">
+                  <div className="flex items-start justify-between mb-3">
                     <span className="text-[#F97316] font-bold text-xs uppercase">{car.seater}</span>
-                    <span className="text-gray-900 font-extrabold text-sm">{car.price}</span>
+                    <div className="text-right">
+                      <span className="text-[10px] text-gray-400 uppercase font-bold tracking-wide block">Per km</span>
+                      <span className="text-gray-900 font-extrabold text-sm block">{car.price}</span>
+                      {car.pricePerDay && (
+                        <>
+                          <span className="text-[10px] text-gray-400 uppercase font-bold tracking-wide block mt-1">Per day</span>
+                          <span className="text-gray-900 font-extrabold text-sm block">{car.pricePerDay}</span>
+                        </>
+                      )}
+                    </div>
                   </div>
                   <p className="text-gray-500 text-sm mb-4 line-clamp-3 leading-relaxed">
                     {car.description}
@@ -1459,7 +1472,7 @@ const AdminDashboard = () => {
 
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm font-bold text-slate-700 mb-1.5">Pricing text</label>
+                  <label className="block text-sm font-bold text-slate-700 mb-1.5">Per km price</label>
                   <input 
                     type="text" 
                     required
@@ -1469,17 +1482,27 @@ const AdminDashboard = () => {
                     className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#F97316] focus:outline-none text-sm transition-colors"
                   />
                 </div>
-                <div className="flex items-center pt-8">
-                  <label className="flex items-center gap-2 cursor-pointer font-bold text-sm text-slate-700">
-                    <input 
-                      type="checkbox"
-                      checked={taxiForm.isPopular}
-                      onChange={(e) => setTaxiForm({ ...taxiForm, isPopular: e.target.checked })}
-                      className="w-4.5 h-4.5 accent-[#F97316] rounded"
-                    />
-                    Most Popular Vehicle
-                  </label>
+                <div>
+                  <label className="block text-sm font-bold text-slate-700 mb-1.5">Per day rent</label>
+                  <input 
+                    type="text" 
+                    value={taxiForm.pricePerDay}
+                    onChange={(e) => setTaxiForm({ ...taxiForm, pricePerDay: e.target.value })}
+                    placeholder="e.g. Rs. 2000"
+                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#F97316] focus:outline-none text-sm transition-colors"
+                  />
                 </div>
+              </div>
+              <div className="flex items-center pt-1">
+                <label className="flex items-center gap-2 cursor-pointer font-bold text-sm text-slate-700">
+                  <input 
+                    type="checkbox"
+                    checked={taxiForm.isPopular}
+                    onChange={(e) => setTaxiForm({ ...taxiForm, isPopular: e.target.checked })}
+                    className="w-4.5 h-4.5 accent-[#F97316] rounded"
+                  />
+                  Most Popular Vehicle
+                </label>
               </div>
 
               <div>

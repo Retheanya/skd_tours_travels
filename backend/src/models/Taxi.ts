@@ -5,6 +5,7 @@ export interface ITaxi extends Document {
   seater: string;
   description: string;
   price: string;
+  pricePerDay?: string;
   imageUrl: string;
   features: string[];
   isPopular?: boolean;
@@ -16,6 +17,7 @@ const TaxiSchema: Schema = new Schema(
     seater: { type: String, required: true },
     description: { type: String, required: true },
     price: { type: String, required: true },
+    pricePerDay: { type: String, default: "" },
     imageUrl: { type: String, required: true },
     features: { type: [String], default: [] },
     isPopular: { type: Boolean, default: false },

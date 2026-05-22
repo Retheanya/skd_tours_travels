@@ -64,6 +64,7 @@ export interface TaxiItem {
   seater: string;
   description: string;
   price: string;
+  pricePerDay?: string;
   imageUrl: string;
   features: string[];
   isPopular?: boolean;

@@ -232,7 +232,8 @@ const Footer = () => {
                 <div className="flex items-start gap-3">
                   <Phone className="w-4 h-4 flex-shrink-0 mt-1" style={{ color: "#f97316" }} />
                   <div style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
-                    {["+91 98945 55553", "+91 94425 55553", "+91 98947 70505", "+91 98430 51148"].map((num, i) => (
+                    {["+91 98945 55553", "+91 94425 55553", "+91 98947 70505", "+91 96265 55559"].map((num, i) => (
+
                       <a key={i} href={`tel:${num.replace(/\s/g, "")}`} style={{ ...linkStyleOrange }}
                         onMouseEnter={e => (e.currentTarget.style.opacity = "0.75")}
                         onMouseLeave={e => (e.currentTarget.style.opacity = "1")}

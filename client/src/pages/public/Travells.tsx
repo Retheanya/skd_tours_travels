@@ -16,6 +16,7 @@ const fleet = [
     seater: "4+1 Seater",
     description: "Perfect for small families or business trips within the city or outstation.",
     price: "Rs. 14 / km",
+    pricePerDay: "Rs. 1800",
     features: ["A/C", "Music System", "Professional Driver", "Clean Interiors"],
     isPopular: true
   },
@@ -25,6 +26,7 @@ const fleet = [
     seater: "4+1 Seater",
     description: "Comfortable sedan with ample legroom and boot space for your luggage.",
     price: "Rs. 15 / km",
+    pricePerDay: "Rs. 2000",
     features: ["A/C", "Ample Boot Space", "Well Maintained", "Safe Driving"]
   },
   {
@@ -33,6 +35,7 @@ const fleet = [
     seater: "7+1 Seater",
     description: "The ultimate choice for group travels, long journeys, and family outings.",
     price: "Rs. 22 / km",
+    pricePerDay: "Rs. 3500",
     features: ["Dual A/C", "Luxury Seating", "Spacious", "Smooth Ride"],
     isPopular: true
   }
@@ -283,12 +286,25 @@ const Travells = () => {
                       </div>
                     ))}
                   </div>
-                  <div className="flex items-center justify-between mt-auto">
-                    <div>
-                      <p className="text-[10px] text-gray-400 uppercase font-black">Starting from</p>
-                      <p className="text-2xl font-black text-[#222]">{car.price}</p>
+                  <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-3 mt-auto">
+                    {/* Prices: stacked vertically on mobile/tablet, stacked on desktop too */}
+                    <div className="flex flex-col gap-1 lg:flex-none lg:block">
+                      <div>
+                        <p className="text-[9px] text-gray-400 uppercase font-black tracking-wide">Starting from</p>
+                        <p className="text-lg lg:text-2xl font-black text-[#222] whitespace-nowrap lg:whitespace-normal leading-tight">{car.price}</p>
+                      </div>
+                      {car.pricePerDay && (
+                        <div className="lg:mt-2">
+                          <p className="text-[9px] text-gray-400 uppercase font-black tracking-wide">Per Day</p>
+                          <p className="text-lg lg:text-2xl font-black text-[#222] whitespace-nowrap lg:whitespace-normal leading-tight">{car.pricePerDay}</p>
+                        </div>
+                      )}
                     </div>
-                    <button onClick={() => handleOpenCarBooking(car)} className="bg-orange-500 text-white px-6 py-3 rounded-xl font-black text-sm uppercase hover:bg-[#222] transition-colors">
+                    {/* Book Now: full-width on mobile/tablet, auto on desktop */}
+                    <button
+                      onClick={() => handleOpenCarBooking(car)}
+                      className="w-full lg:w-auto bg-orange-500 text-white px-5 lg:px-6 py-2.5 lg:py-3 rounded-xl font-black text-sm uppercase hover:bg-[#222] transition-colors"
+                    >
                       Book Now
                     </button>
                   </div>

@@ -24,7 +24,7 @@ router.get("/", async (req: Request, res: Response) => {
 // @access  Protected Admin Only
 router.post("/", protect, async (req: Request, res: Response): Promise<void> => {
   try {
-    const { name, seater, description, price, imageUrl, features, isPopular } = req.body;
+    const { name, seater, description, price, pricePerDay, imageUrl, features, isPopular } = req.body;
 
     if (!name || !seater || !description || !price || !imageUrl) {
       res.status(400).json({ message: "Please provide name, seater, description, price and imageUrl" });
@@ -36,6 +36,7 @@ router.post("/", protect, async (req: Request, res: Response): Promise<void> => 
       seater,
       description,
       price,
+      pricePerDay: pricePerDay || "",
       imageUrl,
       features: features || [],
       isPopular: !!isPopular,
@@ -53,7 +54,7 @@ router.post("/", protect, async (req: Request, res: Response): Promise<void> => 
 // @access  Protected Admin Only
 router.put("/:id", protect, async (req: Request, res: Response): Promise<void> => {
   try {
-    const { name, seater, description, price, imageUrl, features, isPopular } = req.body;
+    const { name, seater, description, price, pricePerDay, imageUrl, features, isPopular } = req.body;
 
     const taxi = await Taxi.findById(req.params.id);
     if (!taxi) {
@@ -65,6 +66,7 @@ router.put("/:id", protect, async (req: Request, res: Response): Promise<void> =
     taxi.seater = seater || taxi.seater;
     taxi.description = description || taxi.description;
     taxi.price = price || taxi.price;
+    taxi.pricePerDay = pricePerDay !== undefined ? pricePerDay : taxi.pricePerDay;
     taxi.imageUrl = imageUrl || taxi.imageUrl;
     taxi.features = features !== undefined ? features : taxi.features;
     taxi.isPopular = isPopular !== undefined ? !!isPopular : taxi.isPopular;
